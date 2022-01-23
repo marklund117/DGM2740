@@ -1,4 +1,8 @@
 @media only screen and (min-width: 1028px) {
+    nav, header, footer, main {
+        max-width: 75rem;
+        margin: auto;
+    }
     nav ul {
         padding-left: 2%;
     }
@@ -7,5 +11,16 @@
     }
     nav a {
         padding: .5rem 1rem;
+    }
+    /* figure styling, float and margin 
+    carry over from the medium file */
+    main figure {
+        width: 23%;
+    }
+    div.news {
+        column-count: 3;
+    }
+    footer {
+        margin-top: 3rem;
     }
 } /* end of media query*/

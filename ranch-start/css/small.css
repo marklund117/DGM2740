@@ -57,3 +57,26 @@ main {
 main h1 {
     color: #57aa95;
 }
+
+/* figure styling */
+main figure img {
+    width: 100%;
+}
+
+main figure {
+    width: 100%;
+    margin: 0;
+
+}
+
+main figcaption {
+    text-align: center;
+    font-size: .8rem;
+}
+
+/* footer styling */
+footer {
+    text-align: center;
+    padding: 1rem 2%;
+    background-color: #57aa95;
+}
