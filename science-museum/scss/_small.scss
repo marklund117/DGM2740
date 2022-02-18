@@ -1,0 +1,79 @@
+* { -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+
+/* body rules */
+body {
+    font-family: $mainFont;
+}
+
+/* header rules */
+div#headwrapper {
+    background-color: $primaryColor;
+}
+header {
+
+    h1 {
+        margin: 0;
+        font-size: 2rem;
+    } // end of h1
+    h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-family: monospace;
+        font-weight: 300;
+    } // end of h2
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-top: -1rem;
+max-width: 75rem;
+margin: 0 auto;
+} // end of header
+
+/* nav rules */
+
+nav {
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-top: 0;
+    }
+    ul li a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+        padding: 1rem 2vw;
+        border-top: solid 1px rgba(1, 1, 1, 0.2);
+        margin-left: -2.5rem;
+        } // end of ul li a
+    ul li a:hover {
+        background-color: rgb(233, 236, 235);
+    }
+    ul li.active a {
+        background-color: $backColor;
+    }
+    max-width: 75rem;
+    margin: auto;
+    padding: 0;
+
+}// end of nav
+
+/* main rules */
+main {
+    margin: auto;
+    background-color: $backColor;
+    figure {
+        margin-left: 0;
+    }
+}
+/* footer rules */
+div#footwrapper {
+    background-color: $primaryColor;
+}
+footer {
+    text-align: center;
+    padding: 1rem 2%;
+}

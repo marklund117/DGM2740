@@ -1,1 +1,15 @@
+nav ul {
+    flex-direction: row;
+    li a {
 
+        border-top: solid 1px rgba(1, 1, 1, 0.2);
+        text-align: center;
+        margin-left: 0;
+    }
+    justify-content: space-around;
+    margin-left: -2.5rem;
+    margin-top: 0;
+}
+nav ul li {
+    flex-basis: 25%;
+}
