@@ -11,6 +11,9 @@ body {
 div#headwrapper {
     background-color: $primaryColor;
 }
+div#headertext h2 {
+    display: none;
+}
 header {
 
     h1 {
@@ -19,7 +22,7 @@ header {
     } // end of h1
     h2 {
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-family: monospace;
         font-weight: 300;
     } // end of h2
@@ -32,7 +35,10 @@ margin: 0 auto;
 } // end of header
 
 /* nav rules */
-
+div#navwrapper {
+    background-color: rgb(101, 192, 219);
+    width: 100%;
+}
 nav {
     ul {
         list-style-type: none;
@@ -50,10 +56,10 @@ nav {
         margin-left: -2.5rem;
         } // end of ul li a
     ul li a:hover {
-        background-color: rgb(233, 236, 235);
+        background-color: rgb(55, 192, 146);
     }
     ul li.active a {
-        background-color: $backColor;
+        background-color: #c3cccf;
     }
     max-width: 75rem;
     margin: auto;
@@ -64,9 +70,16 @@ nav {
 /* main rules */
 main {
     margin: auto;
+    margin-top: -1rem;
     background-color: $backColor;
     figure {
         margin-left: 0;
+        display: flex;
+        justify-content: center;
+        margin-right: 0rem;
+        img {
+            width: 100%;
+        }
     }
 }
 /* footer rules */
@@ -76,4 +89,12 @@ div#footwrapper {
 footer {
     text-align: center;
     padding: 1rem 2%;
+}
+main h1 {
+    margin-left: 1rem;
+}
+p#filler {
+        margin: 1rem;
+        margin-bottom: 0;
+        padding-bottom: 5rem;
 }

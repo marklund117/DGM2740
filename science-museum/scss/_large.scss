@@ -2,3 +2,20 @@ main {
     max-width: 75rem;
     margin: auto;
 }
+div#navwrapper {
+    display: flex;
+    justify-content: center;
+    max-height: 3.2rem;
+}
+nav ul li a {
+    display: flex;
+    max-width: 10rem;
+    text-align: center;
+    padding-left: 3rem;
+    white-space: nowrap;
+}
+figure.smallfig {
+    float:right;
+    width: 33%;
+    margin-top: 0;
+}

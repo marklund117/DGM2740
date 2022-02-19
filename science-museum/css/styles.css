@@ -448,6 +448,10 @@ div#headwrapper {
   background-color: #afd1db;
 }
 
+div#headertext h2 {
+  display: none;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -462,12 +466,17 @@ header h1 {
 }
 header h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: monospace;
   font-weight: 300;
 }
 
 /* nav rules */
+div#navwrapper {
+  background-color: #65c0db;
+  width: 100%;
+}
+
 nav {
   max-width: 75rem;
   margin: auto;
@@ -489,19 +498,26 @@ nav ul li a {
   margin-left: -2.5rem;
 }
 nav ul li a:hover {
-  background-color: #e9eceb;
+  background-color: #37c092;
 }
 nav ul li.active a {
-  background-color: #b9ddce;
+  background-color: #c3cccf;
 }
 
 /* main rules */
 main {
   margin: auto;
+  margin-top: -1rem;
   background-color: #b9ddce;
 }
 main figure {
   margin-left: 0;
+  display: flex;
+  justify-content: center;
+  margin-right: 0rem;
+}
+main figure img {
+  width: 100%;
 }
 
 /* footer rules */
@@ -512,6 +528,16 @@ div#footwrapper {
 footer {
   text-align: center;
   padding: 1rem 2%;
+}
+
+main h1 {
+  margin-left: 1rem;
+}
+
+p#filler {
+  margin: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 5rem;
 }
 
 @media only screen and (min-width: 560px) {
@@ -530,12 +556,52 @@ footer {
   nav ul li {
     flex-basis: 25%;
   }
+
+  div#headertext h2 {
+    display: block;
+  }
+
+  main {
+    display: block;
+    flex-direction: row;
+  }
+  main figure.hero {
+    margin-top: 0rem;
+  }
+
+  figure.smallfig {
+    width: 50%;
+    float: right;
+    margin-left: 1rem;
+    margin-top: 0;
+    margin-right: 1rem;
+  }
 }
 /* end of media query for medium*/
 @media only screen and (min-width: 1028px) {
   main {
     max-width: 75rem;
     margin: auto;
+  }
+
+  div#navwrapper {
+    display: flex;
+    justify-content: center;
+    max-height: 3.2rem;
+  }
+
+  nav ul li a {
+    display: flex;
+    max-width: 10rem;
+    text-align: center;
+    padding-left: 3rem;
+    white-space: nowrap;
+  }
+
+  figure.smallfig {
+    float: right;
+    width: 33%;
+    margin-top: 0;
   }
 }
 /* end of media query for large*/
