@@ -1,0 +1,162 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+
+/*----------- HEADER --------------*/
+div.headWrapper {
+    background-image: url(../images/header-small.jpg);
+    height: 140px;
+
+}
+header {
+    padding: .5rem 2%;
+    color: white;
+}
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
+
+/*----------- NAVIGATION --------------*/
+div.navWrapper {
+    background-color: #666;
+    nav {
+        max-width: 60rem;
+    }
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    float: left;
+    width: 25%;
+}
+nav ul li a {
+    display: block;
+    background-color: #444;
+    color: #eee;
+    border-left: 1px solid #777;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+nav ul li:first-child a {border-left: none;}
+
+nav ul li a:hover {
+    background-color: #eee;
+    color: #333;
+}
+nav ul li.active a {
+    background-color: #000;
+    color: #fff;
+}
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+}
+
+div.animationtest1 {
+    width: 3rem;
+    border: 1px solid red;
+    text-align: center;
+    position: relative;
+    animation: mymoves1 5s 20;
+}
+
+@keyframes mymoves1 {
+    0% { left: 0px; }
+    50% { left: 200px; }
+    100% { left: 0px; }
+}
+
+div.animationtest2 {
+    width: 3rem;
+    border: 1px solid red;
+    text-align: center;
+    position: relative;
+    animation: mymoves2 5s 20;
+}
+
+@keyframes mymoves2 {
+    0% { left: 50px; }
+    12% { left: 100px; }
+    25% { left: 150px; }
+    37% {left: 200px; }
+    50% { left: 150px; }
+    67% {left: 100px; }
+    75% { left: 50px; }
+    87% { left: 0px; }
+    100% { left: 50px; }
+}
+
+div.animationtest3 {
+    width: 3rem;
+    border: 1px solid red;
+    text-align: center;
+    position: relative;
+    animation: mymoves3 5s 20;
+}
+
+@keyframes mymoves3 {
+    0% { left: 100px; }
+    12% { left: 150px; }
+    25% { left: 200px; }
+    37% {left: 150px; }
+    50% { left: 100px; }
+    67% {left: 50px; }
+    75% { left: 0px; }
+    87% { left: 50px; }
+    100% { left: 100px; }
+}
+
+div.animationtest4 {
+    width: 3rem;
+    border: 1px solid red;
+    text-align: center;
+    position: relative;
+    animation: mymoves4 5s 20;
+}
+
+@keyframes mymoves4 {
+    0% { left: 150px; }
+    12% { left: 200px; }
+    25% { left: 150px; }
+    37% {left: 100px; }
+    50% { left: 50px; }
+    67% {left: 0px; }
+    75% { left: 50px; }
+    87% { left: 100px; }
+    100% { left: 150px; }
+}
+
+
+/*----------- FOOTER --------------*/
+div.footWrapper {
+    footer {
+        padding: .5rem 2%;
+        text-align: center;
+        max-width: 60rem;
+    }
+    background-color: #ddd;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
