@@ -144,44 +144,14 @@ nav ul li.active a { background-color: #000; color: #fff; }
 /*----------- MAIN --------------*/
 main { padding: 0 2%; min-height: 10rem; }
 
-div.animationtest1 { width: 3rem; border: 1px solid red; text-align: center; position: relative; animation: mymoves1 5s 20; }
+div.deck { display: flex; }
 
-@keyframes mymoves1 { 0% { left: 0px; }
-  50% { left: 200px; }
-  100% { left: 0px; } }
-div.animationtest2 { width: 3rem; border: 1px solid red; text-align: center; position: relative; animation: mymoves2 5s 20; }
+div.maincard { height: 22rem; border: 1px solid green; display: flex; flex-direction: column; align-items: center; justify-content: space-between; flex-basis: 33%; margin: 0.5rem; border-radius: 1rem; }
+div.maincard section { font-size: 1.5rem; margin: 1rem; }
+div.maincard img { margin: 1rem; }
+div.maincard p { margin: 1rem; display: block; }
+div.maincard a { text-decoration: none; padding: 1rem; background-color: #1b4468; color: white; border-radius: 1rem; width: 12rem; text-align: center; margin: 1rem; }
 
-@keyframes mymoves2 { 0% { left: 50px; }
-  12% { left: 100px; }
-  25% { left: 150px; }
-  37% { left: 200px; }
-  50% { left: 150px; }
-  67% { left: 100px; }
-  75% { left: 50px; }
-  87% { left: 0px; }
-  100% { left: 50px; } }
-div.animationtest3 { width: 3rem; border: 1px solid red; text-align: center; position: relative; animation: mymoves3 5s 20; }
-
-@keyframes mymoves3 { 0% { left: 100px; }
-  12% { left: 150px; }
-  25% { left: 200px; }
-  37% { left: 150px; }
-  50% { left: 100px; }
-  67% { left: 50px; }
-  75% { left: 0px; }
-  87% { left: 50px; }
-  100% { left: 100px; } }
-div.animationtest4 { width: 3rem; border: 1px solid red; text-align: center; position: relative; animation: mymoves4 5s 20; }
-
-@keyframes mymoves4 { 0% { left: 150px; }
-  12% { left: 200px; }
-  25% { left: 150px; }
-  37% { left: 100px; }
-  50% { left: 50px; }
-  67% { left: 0px; }
-  75% { left: 50px; }
-  87% { left: 100px; }
-  100% { left: 150px; } }
 /*----------- FOOTER --------------*/
 div.footWrapper { background-color: #ddd; }
 div.footWrapper footer { padding: .5rem 2%; text-align: center; max-width: 60rem; }
@@ -199,6 +169,8 @@ div.footWrapper footer { padding: .5rem 2%; text-align: center; max-width: 60rem
   nav ul li:last-child a { border-right: 1px solid #777; }
   nav ul li a { padding: .5rem 1rem; }
   /*----------- MAIN --------------*/
+  div.deck { display: flex; }
+  div.maincard { flex-basis: 50%; }
   /*----------- FOOTER --------------*/ }
 /* end of media query */
 @media only screen and (min-width: 60rem) { header, nav, main, footer { max-width: 64rem; margin: auto; }
@@ -207,6 +179,12 @@ div.footWrapper footer { padding: .5rem 2%; text-align: center; max-width: 60rem
   div.headWrapper { background-image: url(../images/header-large.jpg); height: 400px; background-size: cover; background-position: left bottom; }
   /*----------- NAVIGATION --------------*/
   /*----------- MAIN --------------*/
+  main img { position: relative; height: 50px; width: 50px; }
+  main img:hover { animation: bouncespin 0.5s 1; }
+  @keyframes bouncespin { 0% { bottom: 0px; transform: rotate(0deg); }
+    50% { bottom: 20px; }
+    100% { bottom: 0px; transform: rotate(360deg); } }
+  div.deck { display: flex; }
   /*----------- FOOTER --------------*/ }
 /* end of media query */
 

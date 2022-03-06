@@ -21,7 +21,28 @@ div.headWrapper {
 
 
 /*----------- MAIN --------------*/
+main {
+        img {
+                position: relative;
+                height: 50px;
+                width: 50px;
 
+        }
+        img:hover {
+                animation: bouncespin 0.5s 1;
+
+                @keyframes bouncespin {
+                        0% {bottom: 0px; transform: rotate(0deg);}
+                        50% {bottom: 20px;}
+                        100% {bottom: 0px; transform: rotate(360deg);}
+                }
+        }
+}
+
+div.deck {
+        display: flex;
+
+}
 
 
 /*----------- FOOTER --------------*/

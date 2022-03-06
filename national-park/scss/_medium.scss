@@ -22,7 +22,12 @@ div.headWrapper {
 
 
 /*----------- MAIN --------------*/
-
+div.deck {
+    display: flex;
+}
+div.maincard {
+    flex-basis: 50%;
+}
 
 
 /*----------- FOOTER --------------*/
