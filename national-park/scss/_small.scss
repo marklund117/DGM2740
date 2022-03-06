@@ -31,14 +31,14 @@ main {
 
 /*----------- HEADER --------------*/
 div.headWrapper {
-    background-color: $maincolor;
+    color: white;
+    background-color: #000; // so the WAVE report doesnt get mad
     background-image: url(../images/header-small.jpg);
     height: 140px;
 
 }
 header {
     padding: 1rem 2%;
-    color: white;
 }
 header h1 {margin: 0;}
 header h2 {margin: 0; font-weight: normal;}
