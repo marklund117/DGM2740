@@ -122,7 +122,7 @@ main img:hover { animation: bouncespin 0.5s 1; }
   50% { bottom: 20px; }
   100% { bottom: 0px; transform: rotate(360deg); } }
 /*----------- HEADER --------------*/
-div.headWrapper { background-image: url(../images/header-small.jpg); height: 140px; }
+div.headWrapper { background-color: #1b4468; background-image: url(../images/header-small.jpg); height: 140px; }
 
 header { padding: 1rem 2%; color: white; }
 
