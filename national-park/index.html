@@ -13,7 +13,9 @@
 
 <!-- STYLE SHEETS -->
 <link href="css/styles.css" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,12 +30,15 @@
     
 <!-- NAVIGATION HERE -->
 <div class="navWrapper">
-    <nav class="clearfix">
-        <ul >
+    <nav>
+        <button id="burger">&#9776;</button>
+        <ul id="smallnav">
+            
             <li><a href="#">Visit</a></li>
             <li class="active"><a href="#">Nature</a></li>
             <li><a href="#">Donate</a></li>
             <li><a href="#">Sites</a></li>
+            
         </ul>
     </nav>
 </div>   
@@ -58,7 +63,7 @@
         <div class="maincard">
             <section>Animals</section>
             <img src="images/animalicon.png">
-            <p>We are not alone in this park - predators and prey of all shapes and sizes make this place their home. Click to learn more about the animals of arches.</p>
+            <p>We are not alone in this park - predators and prey of all sizes make this place their home. Click to learn more about the animals of arches.</p>
             <a href="#">Learn More</a>
         </div>
     </div>
@@ -71,6 +76,7 @@
         &copy; 2022 &bull; Mark Lund &bull; Created for DGM 2740
     </footer>
 </div>
+<script src="scripts/main.js"></script>
 
 </body>
 
