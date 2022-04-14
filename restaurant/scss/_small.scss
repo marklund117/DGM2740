@@ -20,12 +20,12 @@ header {
     flex-direction: row;
 }
 header img {
-    width: 75px;
+    width: 4.688rem; /* 75px eh? */
     margin: 0;
     padding: 0;
 }
-header h1 {margin: 0; font-size: 4rem;}
-header h2 {margin: 0; font-size: 2rem; font-weight: normal;}
+header h1 {margin: 0; font-size: 3rem;}
+header h2 {margin: 0; font-size: 1.8rem; font-weight: normal;}
 
 /*----------- NAVIGATION --------------*/
 nav {
