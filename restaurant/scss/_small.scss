@@ -8,76 +8,145 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*----------- BODY --------------*/
 body {
     font-size: 16px;
-    font-family: Verdana, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: $normalweight;
 }
+main {
+    img {
+            position: relative;
+            height: 50px;
+            width: 50px;
 
+    }
+    img:hover {
+            animation: bouncespin 0.5s 1;
+
+            @keyframes bouncespin {
+                    0% {bottom: 0px; transform: rotate(0deg);}
+                    50% {bottom: 20px;}
+                    100% {bottom: 0px; transform: rotate(360deg);}
+            }
+    }
+}
 
 /*----------- HEADER --------------*/
+div.headWrapper {
+    color: black;
+    background-color: white;
+    height: 100px;
+
+}
 header {
-    padding: .5rem 2%;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: row;
+    padding: 1rem 2%;
 }
-header img {
-    width: 4.688rem; /* 75px eh? */
-    margin: 0;
-    padding: 0;
-}
-header h1 {margin: 0; font-size: 2.5rem;}
-header h2 {margin: 0; font-size: 1.5rem; font-weight: normal;}
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
 
 /*----------- NAVIGATION --------------*/
-nav {
-    ul {
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        margin-top: 0;
-        background-color: rgb(95, 95, 95);
-        padding-left: 0;
-    }
-    ul li a {
-        color: #333;
-        text-decoration: none;
-        display: block;
-        padding: 1rem 2vw;
-        border-top: solid 1px rgba(1, 1, 1, 0.2);
-        } // end of ul li a
-    ul li a:hover {
-        background-color: rgb(206, 206, 206);
-    }
-    ul li.active a {
-        background-color: #d4d4d4;
-    }
-    max-width: 75rem;
-    margin: auto;
+div.navWrapper {
     padding: 0;
-
+    background-color: $maincolor;
+    button {
+        background-color: $maincolor;
+        border: none;
+        font-size: 1.8rem;
+        padding: .5rem;
+        color: $translucent;
+        margin-top: 0.3rem;
+    } // end button
 }
-nav ul li:first-child a {border-left: none;}
-
-
+nav {
+    background-color: $maincolor;
+}
+nav ul.open {
+    display: block;
+}
+nav ul {
+    display: none;
+}
+nav ul, nav ul.open {
+    margin: 0;
+    list-style-type: none;
+    padding: 0; // bruh
+    border-top: solid 1px $translucent;
+    
+    
+    li {
+        margin: 0;
+        border-bottom: solid 1px $translucent;
+    }
+    li a {
+        display: block;
+        padding: .9rem 2vw;
+        text-decoration: none;
+        color: $translucent;
+        font-weight: $lightweight;
+    }
+    li.active a {
+        background-color: darken($maincolor, 8%);
+    }
+    li a:hover {
+        background-color: darken($maincolor, 4%);
+    }
+}
 /*----------- MAIN --------------*/
 main {
     padding: 0 2%;
     min-height: 10rem;
+
+div.deck {
+    display: flex;
+    flex-wrap: wrap;
+}
+div.maincard {
+    border: 2px solid $accentcolor;
+    box-shadow: 3px 2px 6px #CCC;
+    border-radius: $cbr;
+    margin: 1rem 1%;
+    text-align: center;
+    flex-basis: 100%;
+    background-color: $subtlegrey;
+        section {
+                font-size: 1.5rem;
+                padding: 1rem 0;
+                color: $maincolor;
+                border-top-left-radius: $cbr;
+                border-top-right-radius: $cbr;
+        }
+        img {
+                margin: 1rem;
+        }
+        p {
+                padding: 1rem 2vw;
+        }
+        a {
+                display: block;
+                text-decoration: none;
+                padding: 1rem 0;
+                background-color: $maincolor;
+                color: white;
+                border-radius: $cbr;
+                text-align: center;
+                margin: 1rem 2vw;
+        }
+        a:hover {
+            background-color: lighten($maincolor, 10);
+        }
+}
 }
 
-
 /*----------- FOOTER --------------*/
-footer {
-    background-color: #ddd;
-    padding: .5rem 2%;
-    text-align: center;
+div.footWrapper {
+    footer {
+        padding: .5rem 2%;
+        text-align: center;
+        max-width: 60rem;
+        font-weight: $lightweight;
+        margin-top: 2rem;
+    }
+    background-color: $subtlegrey;
 }
 
 
 
 /*----- Clearfix: Force an Element not to collapse -----*/
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}

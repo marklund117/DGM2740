@@ -2,61 +2,62 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Fill Me In">
+<meta name="description" content="Classwork for 2740 by mark lund">
 <meta name="author" content="Mark Lund">
 
-<!-- This start file was build by Paul Cheney  -->
+<!-- This start file was built by Paul Cheney  -->
 <title>Restaurant</title>
 
 <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-
-
-
 <!-- STYLE SHEETS -->
 <link href="scss/styles.css" rel="stylesheet">
-
-
-
-     
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
 <!-- HEADER HERE -->
+<div class="headWrapper">
 	<header>
-        <figure class="logo">
-            <img src="images/LargeHotPot.png" alt="logo"
-            srcset="images/logo1.png 1x, images/logo2.png 2x,
-             images/logo3.png 3x">
-        </figure>
-        <div id="texthead">
-        <h1>Restaurant</h1>
+ <h1>Restaurant</h1>
         <h2>Fresh Soups and Salads</h2>
-        </div>
     </header>
-    
+</div>
     
 <!-- NAVIGATION HERE -->
-    <nav class="clearfix">
-        <ul >
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Locations</a></li>
-            <li class="active"><a href="#">Our Founder</a></li>
-            <li><a href="#">Contact</a></li>    
+<div class="navWrapper">
+    <nav>
+        <button id="burger">&#9776;</button>
+        <ul id="smallnav">
+            
+            <li><a href="#">Visit</a></li>
+            <li class="active"><a href="#">Nature</a></li>
+            <li><a href="#">Donate</a></li>
+            <li><a href="#">Sites</a></li>
+            
         </ul>
     </nav>
-    
+</div>   
     
 <!-- CONTENT HERE -->
+<div class="mainWrapper">
     <main>
-        <h1>Products</h1>
-        <p>The page name should almost exactly match the menu item. </p>
+        <h1>Nature</h1>
     </main>
-    
-<!-- FOOTER HERE -->   
+</div>   
+
+<!-- FOOTER HERE -->  
+<div class="footWrapper">
     <footer>
-        &copy; 2022 &bull; Mark Lund &bull; marklund117@gmail.com
+        &copy; 2022 &bull; Mark Lund &bull; Created for DGM 2740
     </footer>
+</div>
+<script src="scripts/main.js"></script>
 
 </body>
+
 </html>

@@ -8,14 +8,41 @@ header, nav, main, footer {
 
 
 /*----------- HEADER --------------*/
-
+div.headWrapper {
+        height: 100px;
+    }
 
 
 /*----------- NAVIGATION --------------*/
-
-
+div.navWrapper {
+        button {
+                display: none;
+        }
+}
+nav ul, nav ul.open {
+        display: flex;
+        border: none;
+        justify-content: right;
+        margin-right: 2rem;
+        li {
+            margin: 0;
+            border-bottom: none;
+        }
+        li a {
+            display: block;
+            padding: .9rem 2vw;
+            text-decoration: none;
+            color: $translucent;
+            font-weight: $lightweight;
+        }
+}
 
 /*----------- MAIN --------------*/
+main {
+        div.maincard {
+            flex-basis: 31.33%;
+        }
+    }
 
 
 

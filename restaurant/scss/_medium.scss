@@ -6,30 +6,21 @@
 
 
 /*----------- HEADER --------------*/
-
+div.headWrapper {
+    height: 100px;
+}
 
 
 /*----------- NAVIGATION --------------*/
-nav ul {
-    flex-direction: row;
-    padding-left: 0;
-    li a {
 
-        border-top: solid 1px rgba(1, 1, 1, 0.2);
-        text-align: center;
-        margin-left: 0;
-    }
-    justify-content: space-around;
-    margin-top: 0;
-}
-nav ul li {
-    flex-basis: 25%;
-}
 
 
 /*----------- MAIN --------------*/
-
-
+main {
+    div.maincard {
+        flex-basis: 48%;
+    }
+}
 
 /*----------- FOOTER --------------*/
     
