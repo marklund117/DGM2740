@@ -11,37 +11,23 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: $normalweight;
 }
-main {
-    img {
-            position: relative;
-            height: 50px;
-            width: 50px;
-
-    }
-    img:hover {
-            animation: bouncespin 0.5s 1;
-
-            @keyframes bouncespin {
-                    0% {bottom: 0px; transform: rotate(0deg);}
-                    50% {bottom: 20px;}
-                    100% {bottom: 0px; transform: rotate(360deg);}
-            }
-    }
-}
 
 /*----------- HEADER --------------*/
 div.headWrapper {
     color: black;
     background-color: white;
-    height: 100px;
+    height: 6rem;
 
 }
-header {
-    padding: 1rem 2%;
-}
-header h1 {margin: 0;}
+header h1 {margin-top: 1rem;}
 header h2 {margin: 0; font-weight: normal;}
-
+header figure.logo {
+    float: left;
+}
+header figure.logo img {
+    height: 75px;
+    margin-top: -1rem;
+}
 /*----------- NAVIGATION --------------*/
 div.navWrapper {
     padding: 0;
@@ -53,10 +39,13 @@ div.navWrapper {
         padding: .5rem;
         color: $translucent;
         margin-top: 0.3rem;
+        margin-left: 0;
     } // end button
 }
 nav {
     background-color: $maincolor;
+    margin-left: 0;
+    padding-left: 0;
 }
 nav ul.open {
     display: block;
