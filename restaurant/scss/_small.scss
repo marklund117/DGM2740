@@ -10,118 +10,63 @@ body {
     font-size: 16px;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: $normalweight;
+    max-width: 75rem;
+    margin: 0 auto;
 }
 
 /*----------- HEADER --------------*/
-div.headWrapper {
-    color: black;
-    background-color: white;
-    height: 6rem;
-
+header {
+    display: flex;
+    margin-left: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 auto;
+    background-color: yellow;
+    height: 8rem;
+    width: 100%;
 }
-header h1 {margin-top: 1rem;}
-header h2 {margin: 0; font-weight: normal;}
-header figure.logo {
-    float: left;
-}
-header figure.logo img {
-    height: 75px;
-    margin-top: -1rem;
+div.headtext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: green;
+    h1 {
+        background-color: blue;
+    }
+    h2 {
+        background-color: purple;
+    }
 }
 /*----------- NAVIGATION --------------*/
-div.navWrapper {
-    padding: 0;
-    background-color: $maincolor;
-    button {
-        background-color: $maincolor;
-        border: none;
-        font-size: 1.8rem;
-        padding: .5rem;
-        color: $translucent;
-        margin-top: 0.3rem;
-        margin-left: 0;
-    } // end button
+
+/*----------- MAIN --------------*/
+div.mainWrapper {
+    background-color: red;
+    float: left;
+    width: 100%;
+    margin: auto;
 }
-nav {
-    background-color: $maincolor;
+main {
+    margin: auto;
+    min-height: 10rem;
+    p {
+        background-color: blue;
+        width: 100%;
+    }
+    padding-left: 1rem;
+    padding-right: 1rem;
+    float: left;
+}
+figure.banner {
     margin-left: 0;
     padding-left: 0;
-}
-nav ul.open {
-    display: block;
-}
-nav ul {
-    display: none;
-}
-nav ul, nav ul.open {
-    margin: 0;
-    list-style-type: none;
-    padding: 0; // bruh
-    border-top: solid 1px $translucent;
-    
-    
-    li {
-        margin: 0;
-        border-bottom: solid 1px $translucent;
+    margin-top: 0;
+    margin-right: 0;
+    img.banner {
+        max-width: 100%;
+        margin-right: 0;
     }
-    li a {
-        display: block;
-        padding: .9rem 2vw;
-        text-decoration: none;
-        color: $translucent;
-        font-weight: $lightweight;
-    }
-    li.active a {
-        background-color: darken($maincolor, 8%);
-    }
-    li a:hover {
-        background-color: darken($maincolor, 4%);
-    }
-}
-/*----------- MAIN --------------*/
-main {
-    padding: 0 2%;
-    min-height: 10rem;
-
-div.deck {
-    display: flex;
-    flex-wrap: wrap;
-}
-div.maincard {
-    border: 2px solid $accentcolor;
-    box-shadow: 3px 2px 6px #CCC;
-    border-radius: $cbr;
-    margin: 1rem 1%;
-    text-align: center;
-    flex-basis: 100%;
-    background-color: $subtlegrey;
-        section {
-                font-size: 1.5rem;
-                padding: 1rem 0;
-                color: $maincolor;
-                border-top-left-radius: $cbr;
-                border-top-right-radius: $cbr;
-        }
-        img {
-                margin: 1rem;
-        }
-        p {
-                padding: 1rem 2vw;
-        }
-        a {
-                display: block;
-                text-decoration: none;
-                padding: 1rem 0;
-                background-color: $maincolor;
-                color: white;
-                border-radius: $cbr;
-                text-align: center;
-                margin: 1rem 2vw;
-        }
-        a:hover {
-            background-color: lighten($maincolor, 10);
-        }
-}
 }
 
 /*----------- FOOTER --------------*/
@@ -129,13 +74,22 @@ div.footWrapper {
     footer {
         padding: .5rem 2%;
         text-align: center;
-        max-width: 60rem;
+        max-width: 75rem;
         font-weight: $lightweight;
-        margin-top: 2rem;
+        margin-top: 0.5rem;
     }
     background-color: $subtlegrey;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 
 
 /*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
