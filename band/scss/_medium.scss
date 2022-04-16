@@ -10,28 +10,7 @@
 
 
 /*----------- NAVIGATION --------------*/
-div.navWrapper {
-    button {
-            display: none;
-    }
-}
-nav ul, nav ul.open {
-    display: flex;
-    border: none;
-    justify-content: left;
-    margin-right: 2rem;
-    li {
-        margin: 0;
-        border-bottom: none;
-    }
-    li a {
-        display: block;
-        padding: .9rem 2vw;
-        text-decoration: none;
-        color: $translucent;
-        font-weight: $lightweight;
-    }
-}
+
 
 
 /*----------- MAIN --------------*/

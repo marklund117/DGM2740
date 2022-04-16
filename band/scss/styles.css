@@ -364,7 +364,6 @@ header {
   margin-left: 0;
   flex-direction: row;
   justify-content: flex-start;
-  margin: 0 auto;
   height: 8rem;
   width: 100%;
 }
@@ -373,76 +372,53 @@ header img {
 }
 
 div.headtext {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 8rem;
 }
-div.headtext h1 {
-  margin-top: -0.5rem;
-}
-div.headtext h2 {
-  margin-top: -1rem;
+div.headtext h1, div.headtext h2 {
+  text-shadow: 1px 1px rgb(146, 167, 184);
 }
 
 /*----------- NAVIGATION --------------*/
-div.navWrapper {
-  padding: 0;
-  background-color: rgb(51, 89, 192);
-}
-div.navWrapper button {
-  background-color: rgb(51, 89, 192);
+nav button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
   border: none;
-  font-size: 1.8rem;
-  padding: 0.5rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-top: 0.3rem;
+  font-size: 1.5rem;
+  color: #333;
+  padding: 0.6rem;
 }
-div.navWrapper button span:nth-child(1) {
-  display: block;
-}
-div.navWrapper button span:nth-child(2) {
-  display: none;
-}
-div.navWrapper button.open span:nth-child(1) {
-  display: none;
-}
-div.navWrapper button.open span:nth-child(2) {
-  display: block;
-}
-
-nav {
+nav ul {
   background-color: rgb(51, 89, 192);
+  position: absolute;
+  right: 0;
+  list-style-type: none;
+  width: 100%;
+  display: none;
+  margin-top: 2.7rem;
+  margin-left: 0;
+  padding-left: 0;
+  padding-top: 0;
 }
-
 nav ul.open {
   display: block;
 }
-
-nav ul {
-  display: none;
+nav ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-
-nav ul, nav ul.open {
-  margin: 0;
-  list-style-type: none;
-  padding: 0;
-  border-top: solid 1px rgba(255, 255, 255, 0.9);
-}
-nav ul li, nav ul.open li {
-  margin: 0;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.9);
-}
-nav ul li a, nav ul.open li a {
+nav ul li a {
   display: block;
-  padding: 0.9rem 2vw;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
+  padding: 0.9rem;
   font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  text-align: right;
 }
-nav ul li.active a, nav ul.open li.active a {
+nav ul li.active a {
   background-color: #2a4aa0;
 }
-nav ul li a:hover, nav ul.open li a:hover {
+nav ul li a:hover {
   background-color: #2f52b0;
 }
 
@@ -553,28 +529,6 @@ div.footWrapper footer {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
-  div.navWrapper button {
-    display: none;
-  }
-
-  nav ul, nav ul.open {
-    display: flex;
-    border: none;
-    justify-content: left;
-    margin-right: 2rem;
-  }
-  nav ul li, nav ul.open li {
-    margin: 0;
-    border-bottom: none;
-  }
-  nav ul li a, nav ul.open li a {
-    display: block;
-    padding: 0.9rem 2vw;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 300;
-  }
-
   /*----------- MAIN --------------*/
   div.member {
     flex-basis: 50%;
@@ -596,28 +550,6 @@ div.footWrapper footer {
   }
 
   /*----------- NAVIGATION --------------*/
-  div.navWrapper button {
-    display: none;
-  }
-
-  nav ul, nav ul.open {
-    display: flex;
-    border: none;
-    justify-content: left;
-    margin-right: 2rem;
-  }
-  nav ul li, nav ul.open li {
-    margin: 0;
-    border-bottom: none;
-  }
-  nav ul li a, nav ul.open li a {
-    display: block;
-    padding: 0.9rem 2vw;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 300;
-  }
-
   /*----------- MAIN --------------*/
   div.member {
     flex-basis: 25%;
