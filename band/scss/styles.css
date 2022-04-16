@@ -479,7 +479,51 @@ picture.banner img {
 
 div.sidebyside {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div.member {
+  flex-basis: 100%;
+}
+
+main figure {
+  margin: 0.5rem;
+}
+
+figure.shape1 img {
+  float: right;
+  shape-outside: circle(100% at 100% 0%);
+  -webkit-clip-path: circle(100% at 100% 0);
+          clip-path: circle(100% at 100% 0);
+  margin: 0.5rem;
+}
+
+figure.shape2 img {
+  float: right;
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 50% 51%, 0% 50%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 50% 51%, 0% 50%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 50% 51%, 0% 50%);
+  margin: 0.5rem;
+}
+
+figure.shape3 img {
+  float: right;
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 52% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 52% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 52% 100%);
+  margin: 0.5rem;
+}
+
+figure.shape4 img {
+  float: right;
+  shape-outside: polygon(3% 11%, 16% 91%, 84% 95%, 19% 29%, 72% 28%, 84% 67%, 65% 34%, 28% 32%, 96% 99%, 90% 5%);
+  -webkit-clip-path: polygon(3% 11%, 16% 91%, 84% 95%, 19% 29%, 72% 28%, 84% 67%, 65% 34%, 28% 32%, 96% 99%, 90% 5%);
+          clip-path: polygon(3% 11%, 16% 91%, 84% 95%, 19% 29%, 72% 28%, 84% 67%, 65% 34%, 28% 32%, 96% 99%, 90% 5%);
+  margin: 0.5rem;
+}
+
+div.member h2 {
+  margin-left: 0.5rem;
 }
 
 /*----------- FOOTER --------------*/
@@ -532,6 +576,10 @@ div.footWrapper footer {
   }
 
   /*----------- MAIN --------------*/
+  div.member {
+    flex-basis: 50%;
+  }
+
   /*----------- FOOTER --------------*/
 }
 /* end of media query */
@@ -571,6 +619,10 @@ div.footWrapper footer {
   }
 
   /*----------- MAIN --------------*/
+  div.member {
+    flex-basis: 25%;
+  }
+
   /*----------- FOOTER --------------*/
 }
 /* end of media query *//*# sourceMappingURL=styles.css.map */
