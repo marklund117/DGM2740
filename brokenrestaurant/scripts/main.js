@@ -1,7 +1,6 @@
 // main JS script for 2740 module 4
 function toggleMenu(){
     document.getElementById("smallnav").classList.toggle("open")
-    document.getElementById("burger").classList.toggle("open")
 
 }
 

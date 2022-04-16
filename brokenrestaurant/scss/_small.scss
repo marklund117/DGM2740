@@ -21,6 +21,7 @@ header {
     flex-direction: row;
     justify-content: flex-start;
     margin: 0 auto;
+    background-color: yellow;
     height: 8rem;
     width: 100%;
 }
@@ -29,75 +30,19 @@ div.headtext {
     flex-direction: column;
     justify-content: center;
     align-items: left;
+    background-color: green;
     h1 {
-        margin-top: -0.5rem;
+        background-color: blue;
     }
     h2 {
-        margin-top: -1rem;
+        background-color: purple;
     }
 }
 /*----------- NAVIGATION --------------*/
-div.navWrapper {
-    padding: 0;
-    background-color: $maincolor;
-    button {
-        background-color: $maincolor;
-        border: none;
-        font-size: 1.8rem;
-        padding: .5rem;
-        color: $translucent;
-        margin-top: 0.3rem;
-    } // end button
 
-    button span:nth-child(1) {
-        display: block;
-    }
-    button span:nth-child(2) {
-        display: none;
-    }
-    button.open span:nth-child(1) {
-        display: none;
-    }
-    button.open span:nth-child(2) {
-        display: block;
-    }
-}
-nav {
-    background-color: $maincolor;
-}
-nav ul.open {
-    display: block;
-}
-nav ul {
-    display: none;
-}
-nav ul, nav ul.open {
-    margin: 0;
-    list-style-type: none;
-    padding: 0; // bruh
-    border-top: solid 1px $translucent;
-    
-    
-    li {
-        margin: 0;
-        border-bottom: solid 1px $translucent;
-    }
-    li a {
-        display: block;
-        padding: .9rem 2vw;
-        text-decoration: none;
-        color: $translucent;
-        font-weight: $lightweight;
-    }
-    li.active a {
-        background-color: darken($maincolor, 8%);
-    }
-    li a:hover {
-        background-color: darken($maincolor, 4%);
-    }
-}
 /*----------- MAIN --------------*/
 div.mainWrapper {
+    background-color: red;
     float: left;
     width: 100%;
     margin: auto;
@@ -106,28 +51,24 @@ main {
     margin: auto;
     min-height: 10rem;
     p {
-        display: flex;
-        flex-basis: 100%;
+        background-color: blue;
         width: 100%;
     }
     padding-left: 1rem;
     padding-right: 1rem;
     float: left;
 }
-picture.banner {
+figure.banner {
     margin-left: 0;
     padding-left: 0;
     margin-top: 0;
     margin-right: 0;
-    width: 100%;
-    img {
+    img.banner {
         max-width: 100%;
+        margin-right: 0;
     }
 }
-div.sidebyside {
-    display: flex;
-    flex-direction: row;
-}
+
 /*----------- FOOTER --------------*/
 div.footWrapper {
     footer {
@@ -140,8 +81,8 @@ div.footWrapper {
     background-color: $subtlegrey;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
-    max-width: 75rem;
 }
 
 
