@@ -499,6 +499,16 @@ div.member h2 {
   margin-left: 0.5rem;
 }
 
+section.thegallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+section.thegallery img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 /*----------- FOOTER --------------*/
 div.footWrapper {
   background-color: #ddd;
@@ -581,6 +591,17 @@ div.footWrapper footer {
   /*----------- MAIN --------------*/
   div.member {
     flex-basis: 25%;
+  }
+
+  section.thegallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  section.thegallery img {
+    flex-basis: 25%;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
   }
 
   /*----------- FOOTER --------------*/
