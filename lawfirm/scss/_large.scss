@@ -1,0 +1,59 @@
+header, main, footer {
+        max-width: 75rem;
+        margin:auto;
+}
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+header {
+        grid-template-columns: 150px auto auto;
+}
+
+/*----------- NAVIGATION --------------*/
+nav {
+        justify-self: end;
+        button {
+                display: none;
+        }
+        ul, ul.open {
+                position: relative;
+                display: flex;
+                background-color: transparent;
+                width: auto;
+        }
+        ul li a {
+              color: $maincolor;
+              border-radius: 20px;
+              padding: .5rem 1rem;
+              margin-left: 0.5rem;
+              transition: all .5s ease;
+        }
+        ul li a:hover {
+                background-color: #eee;
+                color: $maincolor!important;
+        }
+        ul li.active a {
+                color: white;
+        }
+} // end nav
+
+/*----------- MAIN --------------*/
+div.member {
+        flex-basis: 25%;
+    }
+
+section.thegallery {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+        img {
+            flex-basis: 25%;
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+        }
+}
+/*----------- FOOTER --------------*/
+    
