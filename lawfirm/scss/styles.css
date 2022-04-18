@@ -373,7 +373,7 @@ div.headtext {
   height: 8rem;
 }
 div.headtext h1, div.headtext h2 {
-  text-shadow: 1px 1px rgb(146, 167, 184);
+  text-shadow: 1px 1px rgb(95, 167, 113);
 }
 
 /*----------- NAVIGATION --------------*/
@@ -388,7 +388,7 @@ nav button {
   padding: 0.6rem;
 }
 nav ul {
-  background-color: rgb(51, 89, 192);
+  background-color: rgb(87, 126, 115);
   position: absolute;
   right: 0;
   list-style-type: none;
@@ -413,10 +413,68 @@ nav ul li a {
   text-align: right;
 }
 nav ul li.active a {
-  background-color: #2a4aa0;
+  background-color: #46665d;
 }
 nav ul li a:hover {
-  background-color: #2f52b0;
+  background-color: #4f7268;
+}
+
+/* columns */
+div.flexed {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  padding: 0 2vw;
+}
+
+.small-1 {
+  flex-basis: 8.3333333333%;
+}
+
+.small-2 {
+  flex-basis: 16.6666666667%;
+}
+
+.small-3 {
+  flex-basis: 25%;
+}
+
+.small-4 {
+  flex-basis: 33.3333333333%;
+}
+
+.small-5 {
+  flex-basis: 41.6666666667%;
+}
+
+.small-6 {
+  flex-basis: 50%;
+}
+
+.small-7 {
+  flex-basis: 58.3333333333%;
+}
+
+.small-8 {
+  flex-basis: 66.6666666667%;
+}
+
+.small-9 {
+  flex-basis: 75%;
+}
+
+.small-10 {
+  flex-basis: 83.3333333333%;
+}
+
+.small-11 {
+  flex-basis: 91.6666666667%;
+}
+
+.small-12 {
+  flex-basis: 100%;
 }
 
 /*----------- MAIN --------------*/
@@ -427,86 +485,27 @@ div.mainWrapper {
 }
 
 main {
-  margin: auto;
   min-height: 10rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  float: left;
 }
-main p {
+
+div.social {
+  background-color: rgb(87, 126, 115);
+  color: rgb(233, 233, 233);
+  padding: 1rem;
   display: flex;
-  flex-basis: 100%;
   width: 100%;
 }
 
-picture.banner {
-  margin-left: 0;
-  padding-left: 0;
-  margin-top: 0;
-  margin-right: 0;
-  width: 100%;
-}
-picture.banner img {
-  max-width: 100%;
+div.social a {
+  color: rgb(231, 231, 231);
+  font-size: 3rem;
+  text-decoration: none;
+  flex-basis: 25%;
+  text-align: center;
 }
 
-div.sidebyside {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-div.member {
-  flex-basis: 100%;
-}
-
-main figure {
-  margin: 0.5rem;
-}
-
-figure.shape1 img {
-  float: right;
-  shape-outside: circle(100% at 100% 0%);
-  -webkit-clip-path: circle(100% at 100% 0);
-          clip-path: circle(100% at 100% 0);
-  margin: 0.5rem;
-}
-
-figure.shape2 img {
-  float: right;
-  shape-outside: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 50% 51%, 0% 50%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 50% 51%, 0% 50%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 50% 51%, 0% 50%);
-  margin: 0.5rem;
-}
-
-figure.shape3 img {
-  float: right;
-  shape-outside: polygon(0 0, 100% 0, 100% 100%, 52% 100%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 52% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 52% 100%);
-  margin: 0.5rem;
-}
-
-figure.shape4 img {
-  float: right;
-  shape-outside: polygon(3% 11%, 16% 91%, 84% 95%, 19% 29%, 72% 28%, 84% 67%, 65% 34%, 28% 32%, 96% 99%, 90% 5%);
-  -webkit-clip-path: polygon(3% 11%, 16% 91%, 84% 95%, 19% 29%, 72% 28%, 84% 67%, 65% 34%, 28% 32%, 96% 99%, 90% 5%);
-          clip-path: polygon(3% 11%, 16% 91%, 84% 95%, 19% 29%, 72% 28%, 84% 67%, 65% 34%, 28% 32%, 96% 99%, 90% 5%);
-  margin: 0.5rem;
-}
-
-div.member h2 {
-  margin-left: 0.5rem;
-}
-
-section.thegallery {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-section.thegallery img {
-  width: 100%;
-  margin-bottom: 1rem;
+div.social a:hover {
+  color: rgb(255, 255, 255);
 }
 
 /*----------- FOOTER --------------*/
@@ -536,15 +535,84 @@ div.footWrapper footer {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
-  nav ul {
-    width: 200px;
+  nav {
+    justify-self: end;
+  }
+  nav button {
+    display: none;
+  }
+  nav ul, nav ul.open {
+    position: relative;
+    display: flex;
+    background-color: transparent;
+    width: auto;
+    justify-content: flex-end;
+  }
+  nav ul li a {
+    color: rgb(87, 126, 115);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    transition: all 0.5s ease;
+  }
+  nav ul li a:hover {
+    background-color: #eee;
+    color: rgb(87, 126, 115) !important;
+  }
+  nav ul li.active a {
+    color: white;
   }
 
-  /*----------- MAIN --------------*/
-  div.member {
+  /* columns */
+  .medium-1 {
+    flex-basis: 8.3333333333%;
+  }
+
+  .medium-2 {
+    flex-basis: 16.6666666667%;
+  }
+
+  .medium-3 {
+    flex-basis: 25%;
+  }
+
+  .medium-4 {
+    flex-basis: 33.3333333333%;
+  }
+
+  .medium-5 {
+    flex-basis: 41.6666666667%;
+  }
+
+  .medium-6 {
     flex-basis: 50%;
   }
 
+  .medium-7 {
+    flex-basis: 58.3333333333%;
+  }
+
+  .medium-8 {
+    flex-basis: 66.6666666667%;
+  }
+
+  .medium-9 {
+    flex-basis: 75%;
+  }
+
+  .medium-10 {
+    flex-basis: 83.3333333333%;
+  }
+
+  .medium-11 {
+    flex-basis: 91.6666666667%;
+  }
+
+  .medium-12 {
+    flex-basis: 100%;
+  }
+
+  /*----------- MAIN --------------*/
   /*----------- FOOTER --------------*/
 }
 /* end of media query */
@@ -572,9 +640,10 @@ div.footWrapper footer {
     display: flex;
     background-color: transparent;
     width: auto;
+    justify-content: flex-end;
   }
   nav ul li a {
-    color: rgb(51, 89, 192);
+    color: rgb(87, 126, 115);
     border-radius: 20px;
     padding: 0.5rem 1rem;
     margin-left: 0.5rem;
@@ -582,28 +651,62 @@ div.footWrapper footer {
   }
   nav ul li a:hover {
     background-color: #eee;
-    color: rgb(51, 89, 192) !important;
+    color: rgb(87, 126, 115) !important;
   }
   nav ul li.active a {
     color: white;
   }
 
+  /* columns */
+  .large-1 {
+    flex-basis: 8.3333333333%;
+  }
+
+  .large-2 {
+    flex-basis: 16.6666666667%;
+  }
+
+  .large-3 {
+    flex-basis: 25%;
+  }
+
+  .large-4 {
+    flex-basis: 33.3333333333%;
+  }
+
+  .large-5 {
+    flex-basis: 41.6666666667%;
+  }
+
+  .large-6 {
+    flex-basis: 50%;
+  }
+
+  .large-7 {
+    flex-basis: 58.3333333333%;
+  }
+
+  .large-8 {
+    flex-basis: 66.6666666667%;
+  }
+
+  .large-9 {
+    flex-basis: 75%;
+  }
+
+  .large-10 {
+    flex-basis: 83.3333333333%;
+  }
+
+  .large-11 {
+    flex-basis: 91.6666666667%;
+  }
+
+  .large-12 {
+    flex-basis: 100%;
+  }
+
   /*----------- MAIN --------------*/
-  div.member {
-    flex-basis: 25%;
-  }
-
-  section.thegallery {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-  }
-  section.thegallery img {
-    flex-basis: 25%;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-  }
-
   /*----------- FOOTER --------------*/
 }
 /* end of media query *//*# sourceMappingURL=styles.css.map */

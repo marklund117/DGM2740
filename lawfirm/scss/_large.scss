@@ -23,6 +23,7 @@ nav {
                 display: flex;
                 background-color: transparent;
                 width: auto;
+                justify-content: flex-end;
         }
         ul li a {
               color: $maincolor;
@@ -40,20 +41,12 @@ nav {
         }
 } // end nav
 
+/* columns */
+@for $i from 1 through 12 {
+        $w: ($i / 12) * 100%;
+        .large-#{$i} {flex-basis: $w;}
+    } // end loop
 /*----------- MAIN --------------*/
-div.member {
-        flex-basis: 25%;
-    }
 
-section.thegallery {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-        img {
-            flex-basis: 25%;
-            margin-bottom: 1rem;
-            margin-right: 1rem;
-        }
-}
 /*----------- FOOTER --------------*/
     
