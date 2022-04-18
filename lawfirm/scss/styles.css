@@ -478,12 +478,6 @@ div.flexed {
 }
 
 /*----------- MAIN --------------*/
-div.mainWrapper {
-  float: left;
-  width: 100%;
-  margin: auto;
-}
-
 main {
   min-height: 10rem;
 }
@@ -640,7 +634,6 @@ div.footWrapper footer {
     display: flex;
     background-color: transparent;
     width: auto;
-    justify-content: flex-end;
   }
   nav ul li a {
     color: rgb(87, 126, 115);

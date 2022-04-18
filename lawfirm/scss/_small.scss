@@ -87,11 +87,6 @@ div.flexed {
     .small-#{$i}{flex-basis: $w;}
 } // end loop
 /*----------- MAIN --------------*/
-div.mainWrapper {
-    float: left;
-    width: 100%;
-    margin: auto;
-}
 main {
 min-height: 10rem;
 
