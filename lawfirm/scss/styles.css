@@ -562,6 +562,30 @@ div.blogcard p {
   margin: 0.9rem;
 }
 
+div.tipfaq {
+  background-color: rgb(6, 56, 10);
+  color: white;
+  margin-bottom: 1rem;
+  height: 16rem;
+}
+
+div.tipfaq h2 {
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+div.tipfaq p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+div.tipfaq button {
+  background-color: #ddd;
+  color: rgb(6, 56, 10);
+  border-style: none;
+  padding: 0.5rem;
+}
+
 div.social {
   background-color: rgb(87, 126, 115);
   color: rgb(233, 233, 233);
