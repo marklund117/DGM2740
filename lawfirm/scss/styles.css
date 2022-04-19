@@ -351,6 +351,7 @@ html {
 
 /*----------- BODY --------------*/
 body {
+  display: grid;
   font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
@@ -359,13 +360,14 @@ body {
 
 /*----------- HEADER --------------*/
 div.headWrapper {
+  grid-row-start: 1;
   width: 100%;
   background-color: #ddd;
 }
 
 header {
   display: grid;
-  grid-template-columns: 150px auto;
+  grid-template-columns: 150px auto 44px;
   align-items: center;
   width: 100%;
   background-color: #ddd;
@@ -377,13 +379,17 @@ header img {
 }
 
 div.headtext {
-  height: 8rem;
+  height: 6rem;
 }
 div.headtext h1, div.headtext h2 {
   text-shadow: 1px 1px rgb(95, 167, 113);
 }
 
 /*----------- NAVIGATION --------------*/
+div.navWrapper {
+  grid-row-start: 4;
+}
+
 nav button {
   position: absolute;
   top: 0;
@@ -492,6 +498,10 @@ div.centered {
 }
 
 /*----------- MAIN --------------*/
+div.mainWrapper {
+  grid-row-start: 2;
+}
+
 main {
   min-height: 10rem;
 }
@@ -616,9 +626,8 @@ div.Sbuffer {
 
 /*----------- FOOTER --------------*/
 div.footWrapper {
+  grid-row-start: 3;
   background-color: #ddd;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 div.footWrapper footer {
