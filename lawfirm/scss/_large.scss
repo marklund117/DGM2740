@@ -1,4 +1,4 @@
-header, main, footer {
+main, footer {
         max-width: 75rem;
         margin:auto;
 }
@@ -8,6 +8,7 @@ header, main, footer {
 
 
 /*----------- HEADER --------------*/
+div.headwrapper
 header {
         grid-template-columns: 150px auto auto;
 }
@@ -46,6 +47,11 @@ nav {
         .large-#{$i} {flex-basis: $w;}
     } // end loop
 /*----------- MAIN --------------*/
-
+div.Lbuffer {
+        display: flex;
+}
+div.Sbuffer {
+        display: none;
+}
 /*----------- FOOTER --------------*/
     

@@ -354,16 +354,23 @@ body {
   font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
-  max-width: 75rem;
   margin: 0 auto;
 }
 
 /*----------- HEADER --------------*/
+div.headWrapper {
+  width: 100%;
+  background-color: #ddd;
+}
+
 header {
   display: grid;
   grid-template-columns: 150px auto;
   align-items: center;
   width: 100%;
+  background-color: #ddd;
+  max-width: 75rem;
+  margin: auto;
 }
 header img {
   height: 75px;
@@ -397,6 +404,8 @@ nav ul {
   margin-left: 0;
   padding-left: 0;
   padding-top: 0;
+  max-width: 75rem;
+  margin: auto;
 }
 nav ul.open {
   display: block;
@@ -425,8 +434,13 @@ div.flexed {
   flex-wrap: wrap;
 }
 
+div.centered {
+  justify-content: center;
+  align-items: center;
+}
+
 .column {
-  padding: 0 2vw;
+  padding: 0 1vw;
 }
 
 .small-1 {
@@ -482,6 +496,72 @@ main {
   min-height: 10rem;
 }
 
+div.lawyercard {
+  background-color: rgb(87, 126, 115);
+  text-align: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+div.lawyercard img {
+  width: 100%;
+}
+
+div.lawyercard button {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 90%;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  border-style: none;
+}
+
+div.lawyercard h2 {
+  height: 4rem;
+  padding-top: 1.8rem;
+}
+
+button.calltoaction {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: rgb(6, 56, 10);
+  color: white;
+  border-style: none;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+  height: 8rem;
+}
+
+div.blogcard {
+  background-color: rgb(87, 126, 115);
+  margin-bottom: 1rem;
+}
+
+div.blogcard img {
+  width: 100%;
+}
+
+div.blogcard button {
+  width: 100%;
+  background-color: #ddd;
+  color: rgb(6, 56, 10);
+  border-style: none;
+  padding: 0.5rem;
+}
+
+div.blogcard h2 {
+  text-align: center;
+  color: white;
+}
+
+div.blogcard p {
+  color: white;
+  text-align: left;
+  margin: 0.9rem;
+}
+
 div.social {
   background-color: rgb(87, 126, 115);
   color: rgb(233, 233, 233);
@@ -502,13 +582,20 @@ div.social a:hover {
   color: rgb(255, 255, 255);
 }
 
+div.Lbuffer {
+  display: none;
+}
+
+div.Sbuffer {
+  display: flex;
+}
+
 /*----------- FOOTER --------------*/
 div.footWrapper {
   background-color: #ddd;
   position: fixed;
   bottom: 0;
   width: 100%;
-  max-width: 75rem;
 }
 div.footWrapper footer {
   padding: 0.5rem 2%;
@@ -607,18 +694,26 @@ div.footWrapper footer {
   }
 
   /*----------- MAIN --------------*/
+  div.Lbuffer {
+    display: none;
+  }
+
+  div.Sbuffer {
+    display: none;
+  }
+
   /*----------- FOOTER --------------*/
 }
 /* end of media query */
 @media only screen and (min-width: 60rem) {
-  header, main, footer {
+  main, footer {
     max-width: 75rem;
     margin: auto;
   }
 
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
-  header {
+  div.headwrapper header {
     grid-template-columns: 150px auto auto;
   }
 
@@ -700,6 +795,14 @@ div.footWrapper footer {
   }
 
   /*----------- MAIN --------------*/
+  div.Lbuffer {
+    display: flex;
+  }
+
+  div.Sbuffer {
+    display: none;
+  }
+
   /*----------- FOOTER --------------*/
 }
 /* end of media query *//*# sourceMappingURL=styles.css.map */

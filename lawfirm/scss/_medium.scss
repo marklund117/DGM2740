@@ -43,6 +43,11 @@ nav {
     .medium-#{$i} {flex-basis: $w;}
 } // end loop
 /*----------- MAIN --------------*/
-
+div.Lbuffer {
+        display: none;
+}
+div.Sbuffer {
+        display: none;
+}
 /*----------- FOOTER --------------*/
     
