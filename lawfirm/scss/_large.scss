@@ -1,4 +1,4 @@
-main, footer {
+main, header, footer, nav {
         max-width: 75rem;
         margin:auto;
 }
@@ -14,32 +14,11 @@ header {
 }
 
 /*----------- NAVIGATION --------------*/
-nav {
-        justify-self: end;
-        button {
-                display: none;
-        }
-        ul, ul.open {
-                position: relative;
-                display: flex;
-                background-color: transparent;
-                width: auto;
-        }
-        ul li a {
-              color: $maincolor;
-              border-radius: 20px;
-              padding: .5rem 1rem;
-              margin-left: 0.5rem;
-              transition: all .5s ease;
-        }
-        ul li a:hover {
-                background-color: #eee;
-                color: $maincolor!important;
-        }
-        ul li.active a {
-                color: white;
-        }
-} // end nav
+nav ul li a {
+        padding: 0.2rem 1rem;
+        border-radius: 10px;
+        margin: 0.5rem 0rem;
+}
 
 /* columns */
 @for $i from 1 through 12 {

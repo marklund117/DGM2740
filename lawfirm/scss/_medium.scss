@@ -1,41 +1,56 @@
 
-
+div.headerWrapper {
+        grid-row-start: 1;
+}
+div.navWrapper {
+        grid-row-start: 2;
+}
+div.mainWrapper {
+        grid-row-start: 3;
+}
+div.footWrapper {
+        grid-row-start: 4;
+}
 
 /*----------- BODY --------------*/
 
 
 
 /*----------- HEADER --------------*/
-
+header {
+        grid-template-columns: 150px auto auto;
+        div#phone {
+                display: block;
+                justify-self: end;
+                padding-right: 1rem;
+                a {
+                        color: $maincolor;
+                        text-decoration: none;
+                        font-weight: $normalweight;
+                        font-size: 1.5rem;
+                }
+                a:hover {
+                        color: $accentcolor;
+                }
+        }
+}
 
 
 /*----------- NAVIGATION --------------*/
 nav {
-    justify-self: end;
-    button {
-            display: none;
-    }
-    ul, ul.open {
-            position: relative;
-            display: flex;
-            background-color: transparent;
-            width: auto;
-            justify-content: flex-end;
-    }
-    ul li a {
-          color: $maincolor;
-          border-radius: 20px;
-          padding: .5rem 1rem;
-          margin-left: 0.5rem;
-          transition: all .5s ease;
-    }
-    ul li a:hover {
-            background-color: #eee;
-            color: $maincolor!important;
-    }
-    ul li.active a {
-            color: white;
-    }
+        height: auto;
+        ul {
+                display: flex;
+                max-width: 75rem;
+                justify-content: end;
+                border-bottom: none;
+                li {
+                        border: none;
+                }
+        }
+}
+div#hamburger, div#closex {
+        display: none;
 }
 /* columns */
 @for $i from 1 through 12 {

@@ -363,6 +363,7 @@ div.headWrapper {
   grid-row-start: 1;
   width: 100%;
   background-color: #ddd;
+  border-top: 1rem solid rgb(6, 56, 10);
 }
 
 header {
@@ -377,6 +378,9 @@ header {
 header img {
   height: 75px;
 }
+header div#phone {
+  display: none;
+}
 
 div.headtext {
   height: 6rem;
@@ -390,6 +394,9 @@ div.navWrapper {
   grid-row-start: 4;
 }
 
+nav {
+  height: 100vh;
+}
 nav button {
   position: absolute;
   top: 0;
@@ -401,37 +408,36 @@ nav button {
   padding: 0.6rem;
 }
 nav ul {
-  background-color: rgb(87, 126, 115);
-  position: absolute;
-  right: 0;
-  list-style-type: none;
-  width: 100%;
-  display: none;
-  margin-left: 0;
+  border-bottom: 1px solid #eee;
+  list-style: none;
   padding-left: 0;
-  padding-top: 0;
-  max-width: 75rem;
-  margin: auto;
-}
-nav ul.open {
-  display: block;
 }
 nav ul li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid #eee;
 }
 nav ul li a {
   display: block;
-  padding: 0.9rem;
+  padding: 0.9rem 2vw;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.9);
+  color: #333;
   text-decoration: none;
   text-align: right;
-}
-nav ul li.active a {
-  background-color: #46665d;
+  font-weight: 400;
 }
 nav ul li a:hover {
-  background-color: #4f7268;
+  color: rgb(87, 126, 115);
+}
+nav ul li.active a {
+  background-color: #d7e3e0;
+}
+
+div#hamburger a, div#closex a {
+  display: block;
+  padding: 0.8rem 2vw;
+  color: #333;
+  text-decoration: none;
+  text-align: right;
+  font-size: 2rem;
 }
 
 /* columns */
@@ -646,35 +652,58 @@ div.footWrapper footer {
 }
 
 @media only screen and (min-width: 35rem) {
+  div.headerWrapper {
+    grid-row-start: 1;
+  }
+
+  div.navWrapper {
+    grid-row-start: 2;
+  }
+
+  div.mainWrapper {
+    grid-row-start: 3;
+  }
+
+  div.footWrapper {
+    grid-row-start: 4;
+  }
+
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
+  header {
+    grid-template-columns: 150px auto auto;
+  }
+  header div#phone {
+    display: block;
+    justify-self: end;
+    padding-right: 1rem;
+  }
+  header div#phone a {
+    color: rgb(87, 126, 115);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  header div#phone a:hover {
+    color: rgb(6, 56, 10);
+  }
+
   /*----------- NAVIGATION --------------*/
   nav {
-    justify-self: end;
+    height: auto;
   }
-  nav button {
-    display: none;
-  }
-  nav ul, nav ul.open {
-    position: relative;
+  nav ul {
     display: flex;
-    background-color: transparent;
-    width: auto;
-    justify-content: flex-end;
+    max-width: 75rem;
+    justify-content: end;
+    border-bottom: none;
   }
-  nav ul li a {
-    color: rgb(87, 126, 115);
-    border-radius: 20px;
-    padding: 0.5rem 1rem;
-    margin-left: 0.5rem;
-    transition: all 0.5s ease;
+  nav ul li {
+    border: none;
   }
-  nav ul li a:hover {
-    background-color: #eee;
-    color: rgb(87, 126, 115) !important;
-  }
-  nav ul li.active a {
-    color: white;
+
+  div#hamburger, div#closex {
+    display: none;
   }
 
   /* columns */
@@ -739,7 +768,7 @@ div.footWrapper footer {
 }
 /* end of media query */
 @media only screen and (min-width: 60rem) {
-  main, footer {
+  main, header, footer, nav {
     max-width: 75rem;
     margin: auto;
   }
@@ -751,31 +780,10 @@ div.footWrapper footer {
   }
 
   /*----------- NAVIGATION --------------*/
-  nav {
-    justify-self: end;
-  }
-  nav button {
-    display: none;
-  }
-  nav ul, nav ul.open {
-    position: relative;
-    display: flex;
-    background-color: transparent;
-    width: auto;
-  }
   nav ul li a {
-    color: rgb(87, 126, 115);
-    border-radius: 20px;
-    padding: 0.5rem 1rem;
-    margin-left: 0.5rem;
-    transition: all 0.5s ease;
-  }
-  nav ul li a:hover {
-    background-color: #eee;
-    color: rgb(87, 126, 115) !important;
-  }
-  nav ul li.active a {
-    color: white;
+    padding: 0.2rem 1rem;
+    border-radius: 10px;
+    margin: 0.5rem 0rem;
   }
 
   /* columns */
