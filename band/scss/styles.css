@@ -397,6 +397,7 @@ nav ul {
   margin-left: 0;
   padding-left: 0;
   padding-top: 0;
+  z-index: 999;
 }
 nav ul.open {
   display: block;
@@ -599,7 +600,7 @@ div.footWrapper footer {
     margin-top: 1rem;
   }
   section.thegallery img {
-    flex-basis: 25%;
+    flex-basis: 100%;
     margin-bottom: 1rem;
     margin-right: 1rem;
   }
