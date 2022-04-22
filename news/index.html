@@ -25,10 +25,15 @@
     
 <div id="navWrapper">
     <nav>
-        <ul>
+        <button id="hambutton">
+            <span class="line top"></span>
+            <span class="line middle"></span>
+            <span class="line bottom"></span>
+        </button>
+    <ul class="navlist">
         <li><a href="#">Home</a>
         <li><a href="#">Opinion</a></li>
-        <li><a href="#">Politics</a></li>
+        <li class="active"><a href="#">Politics</a></li>
         <li><a href="#">Business</a></li>
     </ul>
     </nav>
@@ -36,15 +41,75 @@
 
 <div id="mainWrapper">
     <main>
-        
+        <div class="articlegrid">
+            <div class="lead">
+                <img src="images/bigrunway.jpg" alt="a plane landing">
+                <span>Airports and Economic Growth</span>
+            </div>
+            <div class="article">
+                <img src="images/glassfront.jpg" alt="a building">
+                <span>New Hotel Opens Downtown</span>
+            </div>
+            <div class="article">
+                <img src="images/oil.jpg" alt="oil">
+                <span>Energy Costs Rise</span>
+            </div>
+            <div class="article">
+                <img src="images/pillars.jpg" alt="a building with pillars">
+                <span>NIH Releases New Guidelines</span>
+            </div>
+            <div class="article">
+                <img src="images/twogaps.jpg" alt="a building with an unusual shape">
+                <span>Corporate Sector Expands</span>
+            </div>
+            <div class="article">
+                <img src="images/lab.jpg" alt="a lab">
+                <span>New Medicine Developed</span>
+            </div>
+            <div class="article">
+                <img src="images/rocket.jpeg" alt="a rocket">
+                <span>Satellite Launch Complete</span>
+            </div>
+        </div>
     </main>
 </div><!-- end main wrapper -->
     
 <div id="footerWrapper">
     <footer>
+        <div class="footgrid">
+            <div class="footsection">
+                <h2>SECTIONS</h2>
+                <a href="#">Home</a>
+                <a href="#">Video</a>
+                <a href="#">Opinion</a>
+                <a href="#">Entertainment</a>
+                <a href="#">Health</a>
+            </div>
+            <div class="footsection">
+                <h2>TOOLS</h2>
+                <a href="#">Jobs</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Media Relations</a>
+            </div>
+            <div class="footsection">
+                <h2>SHOWS</h2>
+                <a href="#">Happenings</a>
+                <a href="#">Sunday AM</a>
+                <a href="#">Newsroom</a>
+                <a href="#">World</a>
+            </div>
+            <div class="footsection">
+                <h2>PERSONALITIES</h2>
+                <a href="#">Steven Armstrong</a>
+                <a href="#">Hinata Masaya</a>
+                <a href="#">Jack Cooper</a>
+                <a href="#">Anita Williams</a>
+            </div>
+        </div>
         <p>Copyright &copy; Mark Lund 2022</p>
     </footer>
 </div> <!-- end footer wrapper -->
-   
+<script src="js/main.js"></script>
 </body>
 </html>

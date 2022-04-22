@@ -1,6 +1,39 @@
 header, nav, main {
-    max-width: 1240px;
+    max-width: 80rem;
     margin: auto;
 }
 
 /* NAVIGATION STUFF GOES HERE  */
+div.articlegrid {
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+.lead {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+div.footgrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+nav {
+    ul {
+        border: none;
+    }
+    ul li a {
+        color: $menuColor;
+        border-radius: 0.5rem;
+        background-color: white;
+        margin: 0.5rem;
+    }
+    ul li.active a {
+        background-color: rgb(218, 213, 243);
+    }
+    ul li a:hover {
+        background-color: rgb(175, 192, 209);
+    }
+    ul.open {
+        display: block;
+    }
+}
