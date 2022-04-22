@@ -1,0 +1,39 @@
+/* NAVIGATION STUFF GOES HERE  */
+div.articlegrid {
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.lead {
+    grid-column: 1 / span 3;
+}
+div.footgrid {
+    grid-template-columns: 1fr 1fr;
+}
+nav button {
+    display: none;
+}
+.navlist {
+    display: flex;
+}
+nav {
+    ul {
+        margin-left: 2%;
+        border-left: 1px solid rgba(255,255,255,0.1);
+    }
+    ul li a {
+        border: none;
+        font-size: 1rem;
+        color: white;
+        padding: 0.9rem 1.2rem;
+        text-decoration: none;
+        -webkit-transition: background 0.3s linear;
+        transition: background 0.3s linear;
+    }
+    ul li a:hover {
+        background-color: rgba(0,0,0,0.5);
+    }
+    ul.open {
+        display: block;
+    }
+}
