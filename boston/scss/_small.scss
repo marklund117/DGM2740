@@ -5,30 +5,31 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* BODY  */
+.swiper-wrapper {
+    margin-bottom: 30px;
+}
+.swiper {
+    width: 100%;
+    height: auto;
+    img {
+        width: 100%;
+        display: block;
+    }
+    p {
+        background-color: rgba(0,0,0,0.5);
+        margin: 0;
+        padding: 0.4rem 2vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-100%);
+        position: absolute;
+        width: 100%;
+    }
+}
 body {
 	font-family: $defaultFont;
 	font-size: 16px;
 	font-weight: $lightWeight;
-}
-div.articlegrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-}
-span {
-    display: block;
-    text-align: center;
-    font-size: 1rem;
-    padding-top: 0.5rem;
-}
-.lead, .article {
-    padding: 0.5rem 2vw;
-}
-.lead img, .article img {
-    width: 100%;
-}
-.lead {
-    grid-column: 1 / span 2;
 }
 
 /* HEADER  */
@@ -114,37 +115,8 @@ nav button {
 
 /* MAIN  */
 main {
-    p {padding: .5rem 2vw; color: #333; line-height: 125%;}
-	h1 {
-        padding: 1rem 2vw .5rem 2vw; 
-        font-size: 1.5rem; 
-        color: $secondaryColor;
-        font-weight: $lightWeight
-    }
-    .hero {width: 100%;}
-    .hero img {
-        width: 100%;
-        height: auto;
-    }
-} // end main
-
-div.footgrid {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-div.footsection {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding-left: 1.5rem;
-    h2 {
-        padding: 0.2rem;
-        font-size: 1.1rem;
-    }
-    a {
-        padding: 0.2rem;
-        text-decoration: none;
-    }
+    padding: 0 2%;
+    min-height: 10rem;
 }
 
 

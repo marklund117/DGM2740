@@ -112,35 +112,33 @@ html {
 }
 
 /* BODY  */
+.swiper-wrapper {
+  margin-bottom: 30px;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+}
+.swiper img {
+  width: 100%;
+  display: block;
+}
+.swiper p {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0.4rem 2vw;
+  text-align: center;
+  color: white;
+  transform: translateY(-100%);
+  position: absolute;
+  width: 100%;
+}
+
 body {
   font-family: "Spline Sans", sans-serif;
   font-size: 16px;
   font-weight: 300;
-}
-
-div.articlegrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-}
-
-span {
-  display: block;
-  text-align: center;
-  font-size: 1rem;
-  padding-top: 0.5rem;
-}
-
-.lead, .article {
-  padding: 0.5rem 2vw;
-}
-
-.lead img, .article img {
-  width: 100%;
-}
-
-.lead {
-  grid-column: 1/span 2;
 }
 
 /* HEADER  */
@@ -221,43 +219,9 @@ nav button .bottom {
 }
 
 /* MAIN  */
-main p {
-  padding: 0.5rem 2vw;
-  color: #333;
-  line-height: 125%;
-}
-main h1 {
-  padding: 1rem 2vw 0.5rem 2vw;
-  font-size: 1.5rem;
-  color: #404f70;
-  font-weight: 300;
-}
-main .hero {
-  width: 100%;
-}
-main .hero img {
-  width: 100%;
-  height: auto;
-}
-
-div.footgrid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-div.footsection {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding-left: 1.5rem;
-}
-div.footsection h2 {
-  padding: 0.2rem;
-  font-size: 1.1rem;
-}
-div.footsection a {
-  padding: 0.2rem;
-  text-decoration: none;
+main {
+  padding: 0 2%;
+  min-height: 10rem;
 }
 
 /* FOOTER  */
@@ -277,18 +241,6 @@ footer a {
 
 @media only screen and (min-width: 35rem) {
   /* NAVIGATION STUFF GOES HERE  */
-  div.articlegrid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .lead {
-    grid-column: 1/span 3;
-  }
-
-  div.footgrid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   nav button {
     display: none;
   }
@@ -317,25 +269,12 @@ footer a {
   }
 }
 @media only screen and (min-width: 64rem) {
-  header, nav, main {
-    max-width: 80rem;
+  #headerWrapper, #navWrapper, nav, main {
+    max-width: 64rem;
     margin: auto;
   }
 
   /* NAVIGATION STUFF GOES HERE  */
-  div.articlegrid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  .lead {
-    grid-column: 1/span 3;
-    grid-row: 1/span 2;
-  }
-
-  div.footgrid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
   nav ul {
     border: none;
   }
@@ -353,5 +292,10 @@ footer a {
   }
   nav ul.open {
     display: block;
+  }
+
+  #footerWrapper {
+    max-width: 64rem;
+    margin: auto;
   }
 }/*# sourceMappingURL=styles.css.map */

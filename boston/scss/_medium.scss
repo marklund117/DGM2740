@@ -1,15 +1,4 @@
 /* NAVIGATION STUFF GOES HERE  */
-div.articlegrid {
-
-    grid-template-columns: 1fr 1fr 1fr;
-
-}
-.lead {
-    grid-column: 1 / span 3;
-}
-div.footgrid {
-    grid-template-columns: 1fr 1fr;
-}
 nav button {
     display: none;
 }

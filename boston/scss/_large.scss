@@ -1,22 +1,9 @@
-header, nav, main {
-    max-width: 80rem;
+#headerWrapper, #navWrapper, nav, main {
+    max-width: 64rem;
     margin: auto;
 }
 
 /* NAVIGATION STUFF GOES HERE  */
-div.articlegrid {
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
-}
-.lead {
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 2;
-}
-div.footgrid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
 nav {
     ul {
         border: none;
@@ -36,4 +23,9 @@ nav {
     ul.open {
         display: block;
     }
+}
+
+#footerWrapper {
+    max-width: 64rem;
+    margin: auto;
 }
