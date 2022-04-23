@@ -24,7 +24,13 @@ nav {
         display: block;
     }
 }
-
+main div.cards div {
+    flex-basis: 25%;
+    max-height: 256px;
+}
+main div.cards div a {
+    max-height: 256px;
+}
 #footerWrapper {
     max-width: 64rem;
     margin: auto;

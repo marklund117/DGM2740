@@ -224,6 +224,80 @@ main {
   min-height: 10rem;
 }
 
+main h1 {
+  font-size: 3rem;
+  padding: 0.2rem;
+}
+
+main div.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main div.cards div {
+  text-align: center;
+  flex-basis: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+div.cards div:nth-child(1) {
+  background-image: url("../images/airlineSMALL.jpg");
+}
+
+div.cards div:nth-child(2) {
+  background-image: url("../images/carsSMALL.jpg");
+}
+
+div.cards div:nth-child(3) {
+  background-image: url("../images/bridgeSMALL.jpg");
+}
+
+div.cards div:nth-child(4) {
+  background-image: url("../images/cityscapeSMALL.jpg");
+}
+
+main div.cards div a {
+  display: block;
+  width: 100%;
+  height: 400px;
+  text-decoration: none;
+  transition: all 0.5s ease-in;
+}
+
+main div.cards div a i {
+  color: white;
+  font-size: 3rem;
+  margin-top: 4rem;
+}
+
+div.cards div:nth-child(1) a {
+  background-color: rgb(23, 100, 30);
+}
+
+div.cards div:nth-child(2) a {
+  background-color: rgb(26, 44, 94);
+}
+
+div.cards div:nth-child(3) a {
+  background-color: rgb(78, 21, 64);
+}
+
+div.cards div:nth-child(4) a {
+  background-color: rgb(156, 49, 23);
+}
+
+main div.cards a:hover {
+  background: none;
+  text-shadow: 0 0 2px;
+}
+
+main div.cards a h3 {
+  color: white;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+}
+
 /* FOOTER  */
 #footerWrapper {
   background-color: #1b1b1b;
@@ -267,6 +341,10 @@ footer a {
   nav ul.open {
     display: block;
   }
+
+  main div.cards div {
+    flex-basis: 50%;
+  }
 }
 @media only screen and (min-width: 64rem) {
   #headerWrapper, #navWrapper, nav, main {
@@ -292,6 +370,15 @@ footer a {
   }
   nav ul.open {
     display: block;
+  }
+
+  main div.cards div {
+    flex-basis: 25%;
+    max-height: 256px;
+  }
+
+  main div.cards div a {
+    max-height: 256px;
   }
 
   #footerWrapper {

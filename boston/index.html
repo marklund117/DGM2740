@@ -2,96 +2,127 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8"/>
-	<title>Boston</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<link rel="stylesheet" type="text/css" media="screen" href="scss/styles.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <meta charset="utf-8" />
+    <title>Boston</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="scss/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
-<!-- Google Font -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/a165b3d9f2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div id="headerWrapper">
-	<header>
-	</header>
-</div><!-- end header wrapper -->
+    <div id="headerWrapper">
+        <header>
+        </header>
+    </div><!-- end header wrapper -->
 
-    
-    
-<div id="navWrapper">
-    <nav>
-        <button id="hambutton">
-            <span class="line top"></span>
-            <span class="line middle"></span>
-            <span class="line bottom"></span>
-        </button>
-    <ul class="navlist">
-        <li class="active"><a href="#">Visit</a>
-        <li><a href="#">Departments</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Pay Bills</a></li>
-        <li><a href="#">Meetings</a></li>
-        <li><a href="#">Help</a></li>
-    </ul>
-    </nav>
-</div> <!-- end nav wrapper -->
 
-<div id="mainWrapper">
-    <main>
-        <!-- Slider main container -->
-    <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-            <picture>
-                <source srcset="images/airline.jpg" media="(min-width: 35rem)">
-                <source srcset="images/airlineSMALL.jpg" media="(max-width: 35rem)">
-                <img src="images/airline.jpg" alt="a picture">
-            </picture>
-            <p>Boston's Aerial Past Revealed</p>
-        </div>
-        <div class="swiper-slide">
-            <picture>
-                <source srcset="images/cars.jpg" media="(min-width: 35rem)">
-                <source srcset="images/carsSMALL.jpg" media="(max-width: 35rem)">
-                <img src="images/cars.jpg" alt="a picture">
-            </picture>
-            <p>Local Car Club Stages Show</p>
-        </div>
-        <div class="swiper-slide">
-            <picture>
-                <source srcset="images/bridge.jpg" media="(min-width: 35rem)">
-                <source srcset="images/bridgeSMALL.jpg" media="(max-width: 35rem)">
-                <img src="images/bridge.jpg" alt="a picture">
-            </picture>
-            <p>Historic Bridge Due for Demolition</p>
-        </div>
-        <div class="swiper-slide">
-            <picture>
-                <source srcset="images/cityscape.jpg" media="(min-width: 35rem)">
-                <source srcset="images/cityscapeSMALL.jpg" media="(max-width: 35rem)">
-                <img src="images/cityscape.jpg" alt="a picture">
-            </picture>
-            <p>Urban Living Prices Increase</p>
-        </div>
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-    </main>
-</div><!-- end main wrapper -->
-    
-<div id="footerWrapper">
-    <footer>
-        <p>Copyright &copy; Mark Lund 2022</p>
-    </footer>
-</div> <!-- end footer wrapper -->
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
+
+    <div id="navWrapper">
+        <nav>
+            <button id="hambutton">
+                <span class="line top"></span>
+                <span class="line middle"></span>
+                <span class="line bottom"></span>
+            </button>
+            <ul class="navlist">
+                <li class="active"><a href="#">Visit</a>
+                <li><a href="#">Departments</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Pay Bills</a></li>
+                <li><a href="#">Meetings</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+    </div> <!-- end nav wrapper -->
+
+    <div id="mainWrapper">
+        <main>
+            <div>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <picture>
+                                <source srcset="images/airline.jpg" media="(min-width: 35rem)">
+                                <source srcset="images/airlineSMALL.jpg" media="(max-width: 35rem)">
+                                <img src="images/airline.jpg" alt="a picture">
+                            </picture>
+                            <p>Boston's Aerial Past Revealed</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source srcset="images/cars.jpg" media="(min-width: 35rem)">
+                                <source srcset="images/carsSMALL.jpg" media="(max-width: 35rem)">
+                                <img src="images/cars.jpg" alt="a picture">
+                            </picture>
+                            <p>Local Car Club Stages Show</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source srcset="images/bridge.jpg" media="(min-width: 35rem)">
+                                <source srcset="images/bridgeSMALL.jpg" media="(max-width: 35rem)">
+                                <img src="images/bridge.jpg" alt="a picture">
+                            </picture>
+                            <p>Historic Bridge Due for Demolition</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source srcset="images/cityscape.jpg" media="(min-width: 35rem)">
+                                <source srcset="images/cityscapeSMALL.jpg" media="(max-width: 35rem)">
+                                <img src="images/cityscape.jpg" alt="a picture">
+                            </picture>
+                            <p>Urban Living Prices Increase</p>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <h1>Plan Your Visit</h1>
+                <div class="cards">
+                    <div>
+                        <a href="#">
+                            <i class="fa-solid fa-building"></i>
+                            <h3>CARD ONE</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fa-solid fa-building"></i>
+                            <h3>CARD TWO</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fa-solid fa-building"></i>
+                            <h3>CARD THREE</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fa-solid fa-building"></i>
+                            <h3>CARD FOUR</h3>
+                        </a>
+                    </div>
+                </div>
+        </main>
+    </div><!-- end main wrapper -->
+
+    <div id="footerWrapper">
+        <footer>
+            <p>Copyright &copy; Mark Lund 2022</p>
+        </footer>
+    </div> <!-- end footer wrapper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
