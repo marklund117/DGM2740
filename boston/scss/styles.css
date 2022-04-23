@@ -353,10 +353,10 @@ footer a {
   nav ul {
     display: flex;
     margin-left: 2%;
-    border-left: 1px solid rgba 0, 0, 0, 0.1;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
   }
   nav ul li {
-    border-right: 1px solid rgba 0, 0, 0, 0.1;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
   }
   nav ul li a {
     display: block;
