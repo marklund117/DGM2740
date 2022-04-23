@@ -34,84 +34,22 @@ body {
 
 /* HEADER  */
 header {
-    display: grid;
-    grid-template-columns: 51px auto;
-    align-items: center;
 	padding: .5rem 2vw;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/wideshot.JPG');
 	h1 {
-        font-size: 1.6rem;
+        font-size: 2.3rem;
         font-weight: $lightWeight;
-        padding-left: .5rem;
-        color: $primaryColor;
+        color: white;
+    }
+    h2 {
+        padding-top: 0.6rem;
+        color: white;
+        font-weight: $lightWeight;
     }
 } // end header
 
 /* NAVIGATION STUFF GOES HERE  */
 
-#navWrapper {
-    background-color: $menuColor;
-}
-nav {
-    ul {
-        display: none;
-        margin: 0;
-        padding: 0;
-    }
-    ul li.active a {
-        background-color: rgba(0,0,0,0.25);
-    }
-    ul li a {
-        display: block;
-        padding: 0.75rem 2vw;
-        font-size: 1.1rem;
-        color: white;
-        text-decoration: none;
-        border-top: 1px solid rgba(0,0,0,0.2);
-    }
-    ul li a:hover {
-        background-color: rgba(0,0,0,0.5);
-    }
-    ul.open {
-        display: block;
-    }
-}
-nav button {
-    position: relative;
-    height: 44px;
-    width: 44px;
-    background: none;
-    border: none;
-    .line {
-        transition: all .3s ease;
-        position: absolute;
-        height: 2px;
-        width: 60%;
-        background-color: white;
-        left: 20%;
-        padding: 0;
-    } // end line
-    .top {
-        top: 29%;
-    }
-    .middle {
-        top: 48%;
-    }
-    .bottom {
-        top: 67%;
-    }
-} // end button
-
-#hambutton.open {
-    .top {
-        transform: rotate(45deg);
-        top: 48%;
-    }
-    .middle, .bottom {
-        transform: rotate(-45deg);
-        top: 48%;
-    }
-
-}
 
 /* MAIN  */
 main {

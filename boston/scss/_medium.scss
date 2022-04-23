@@ -2,29 +2,55 @@
 nav button {
     display: none;
 }
-.navlist {
-    display: flex;
-}
-nav {
+nav {   
+    background-color: $menuColor;
     ul {
+        display: flex;
         margin-left: 2%;
-        border-left: 1px solid rgba(255,255,255,0.1);
+        border-left: 1px solid rgba (0,0,0,0.1);
+    }
+    ul li {
+        border-right: 1px solid rgba (0,0,0,0.1);
     }
     ul li a {
-        border: none;
+        display: block;
         font-size: 1rem;
-        color: white;
         padding: 0.9rem 1.2rem;
+        color: rgba(255,255,255,0.9);
         text-decoration: none;
-        -webkit-transition: background 0.3s linear;
         transition: background 0.3s linear;
     }
     ul li a:hover {
         background-color: rgba(0,0,0,0.5);
     }
-    ul.open {
-        display: block;
-    }
+} // end nav
+
+#primaryNav li.parent > a:after {
+    content: "\25BC";
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.5);
+    float: left;
+}
+ul li ul {
+    display: flex;
+    flex-direction: column;
+    background-color: darken($menuColor, 5%);
+    border: none;
+    width: 14rem;
+    position: absolute;
+    left: -999rem;
+    z-index: 99;
+}
+ul li ul li {
+    border-right: none;
+    border-top: solid 1px rgba(0,0,0,0.2);
+}
+ul li:hover ul {
+    left: auto;
+    margin-left: 0;
+}
+li.active a {
+    background-color: rgba(0,0,0,0.25);
 }
 main div.cards div {
     flex-basis: 50%;
