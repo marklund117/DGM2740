@@ -360,10 +360,22 @@ header {
   padding: 0.5rem 2%;
   background-color: #eee;
   display: grid;
-  grid-template-columns: 75px auto;
+  grid-template-columns: 75px auto 48px;
 }
 header img {
   width: 75px;
+}
+header button {
+  width: 48px;
+  height: 48px;
+  background: none;
+  color: rgb(31, 82, 102);
+  margin: 1rem 0;
+  border: none;
+  font-size: 2rem;
+  text-align: right;
+  font-weight: bold;
+  align-self: start;
 }
 
 header h1 {
@@ -371,45 +383,57 @@ header h1 {
   font-family: "Nanum Gothic", sans-serif;
 }
 
+#pageWrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.moveOver > .content {
+  transform: translateX(-180px);
+}
+
+.content {
+  transition: transform 500ms ease;
+}
+
 /*----------- NAVIGATION --------------*/
 nav {
-  background-color: rgb(29, 94, 58);
+  background-color: #ddd;
+  width: 180px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: translatex(100%);
 }
-
+nav div {
+  display: block;
+  text-align: center;
+  color: black;
+  background-color: #ddd;
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-weight: bold;
+}
 nav ul {
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
-
-nav ul li {
-  float: left;
-  width: 25%;
-}
-
 nav ul li a {
   display: block;
-  background-color: #298552;
-  color: #eee;
-  border-left: 1px solid #777;
-  padding: 0.5rem 0;
+  padding: 0.9rem 0.5rem;
+  text-align: right;
+  border-bottom: 1px rgba(0, 0, 0, 0.25) solid;
   text-decoration: none;
-  font-size: 0.9rem;
-  text-align: center;
+  color: rgb(31, 82, 102);
 }
-
-nav ul li:first-child a {
-  border-left: none;
-}
-
 nav ul li a:hover {
-  background-color: #eee;
-  color: #333;
+  background-color: #e8f8ef;
 }
-
 nav ul li.active a {
   background-color: rgb(31, 82, 102);
-  color: #fff;
+  color: white;
 }
 
 /*----------- MAIN --------------*/
@@ -460,7 +484,7 @@ form input.submitBtn {
   border: none;
   background-color: rgb(31, 82, 102);
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 1rem;
   margin: 0 0 2rem 2%;
   width: 96%;
@@ -493,26 +517,6 @@ footer {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
-  nav ul {
-    margin-left: 2%;
-  }
-
-  nav ul li {
-    width: auto;
-  }
-
-  nav ul li:first-child a {
-    border-left: 1px solid #777;
-  }
-
-  nav ul li:last-child a {
-    border-right: 1px solid #777;
-  }
-
-  nav ul li a {
-    padding: 0.5rem 1rem;
-  }
-
   /*----------- MAIN --------------*/
   /*----------- FOOTER --------------*/
 }
@@ -526,6 +530,57 @@ footer {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
+  #hamburgerBtn {
+    display: none;
+  }
+
+  nav {
+    position: static;
+    transform: translateX(0);
+    width: auto;
+    background-color: rgb(29, 94, 58);
+  }
+  nav div {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    margin-left: 2%;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul li {
+    float: left;
+    width: auto;
+  }
+
+  nav ul li a {
+    display: block;
+    background-color: #298552;
+    color: #eee;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-align: center;
+    border: none;
+  }
+
+  nav ul li:first-child a {
+    border-left: none;
+  }
+
+  nav ul li a:hover {
+    background-color: rgb(176, 206, 192);
+    color: rgb(31, 82, 102);
+  }
+
+  nav ul li.active a {
+    background-color: rgb(31, 82, 102);
+    color: #fff;
+  }
+
   /*----------- MAIN --------------*/
   form label.sbs {
     padding: 0.4rem 0;

@@ -17,9 +17,21 @@ header {
     padding: .5rem 2%;
     background-color: #eee;
     display: grid;
-    grid-template-columns: 75px auto;
+    grid-template-columns: 75px auto 48px;
     img {
         width: 75px;
+    }
+    button {
+        width: 48px;
+        height: 48px;
+        background: none;
+        color: $mainColor;
+        margin: 1rem 0;
+        border: none;
+        font-size: 2rem;
+        text-align: right;
+        font-weight: bold;
+        align-self: start;
     }
 }
 header h1 {
@@ -27,38 +39,56 @@ header h1 {
     font-family: $mainFont;
 }
 
+#pageWrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.moveOver>.content {
+    transform: translateX(-180px);
+}
+.content {
+    transition: transform 500ms ease;
+}
+
 /*----------- NAVIGATION --------------*/
 nav {
-    background-color: $menuColor;
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-nav ul li {
-    float: left;
-    width: 25%;
-}
-nav ul li a {
-    display: block;
-    background-color: lighten($menuColor, 10%);
-    color: #eee;
-    border-left: 1px solid #777;
-    padding: .5rem 0;
-    text-decoration: none;
-    font-size: .9rem;
-    text-align: center;
-}
-nav ul li:first-child a {border-left: none;}
+    background-color: #ddd;
+    width: 180px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translatex(100%);
 
-nav ul li a:hover {
-    background-color: #eee;
-    color: #333;
-}
-nav ul li.active a {
-    background-color: $mainColor;
-    color: #fff;
+    div {
+        display: block;
+        text-align: center;
+        color: black;
+        background-color: #ddd;
+        font-size: 1.5rem;
+        padding: 1rem;
+        font-weight: bold;
+    }ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    ul li a {
+        display: block;
+        padding: 0.9rem 0.5rem;
+        text-align: right;
+        border-bottom: 1px rgba(0,0,0,0.25) solid;
+        text-decoration: none;
+        color: $mainColor;
+    }
+    ul li a:hover {
+        background-color: lighten($menuColor, 70%);
+    }
+    ul li.active a {
+        background-color: $mainColor;
+        color: white;
+    }
 }
 /*----------- MAIN --------------*/
 main {
@@ -103,7 +133,7 @@ form input.submitBtn {
     border: none;
     background-color: $mainColor;
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 1rem;
     margin: 0 0 2rem 2%;
     width: 96%;

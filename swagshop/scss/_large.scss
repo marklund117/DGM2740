@@ -12,7 +12,48 @@ header, nav, main, footer {
 
 
 /*----------- NAVIGATION --------------*/
-
+#hamburgerBtn {
+        display: none;
+}
+nav {
+        position: static;
+        transform: translateX(0);
+        width: auto;
+        background-color: $menuColor;
+        div {
+                display: none;
+        }
+}
+nav ul {
+        display: flex;
+        margin-left: 2%;
+        border-left: 1px solid rgba(0,0,0,0.2);
+}
+nav ul li {
+        float: left;
+        width: auto;
+}
+nav ul li a {
+        display: block;
+        background-color: lighten($menuColor, 10%);
+        color: #eee;
+        border-right: 1px solid rgba(0,0,0,0.2);
+        padding: .5rem 1rem;
+        text-decoration: none;
+        font-size: .9rem;
+        text-align: center;
+        border: none;
+}
+nav ul li:first-child a {border-left: none;}
+    
+nav ul li a:hover {
+        background-color: rgb(176, 206, 192);
+        color: $mainColor;
+}
+nav ul li.active a {
+        background-color: $mainColor;
+        color: #fff;
+}
 
 
 /*----------- MAIN --------------*/

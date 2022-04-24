@@ -25,15 +25,19 @@
      
 </head>
 <body>
+    <div id="pageWrapper">
+        <div class="content">
 <!-- HEADER HERE -->
 <header>
 <img src="images/logo.png" alt="logo">
 <h1>Swag Shop</h1>
+<button id="hamburgerBtn">&#9776;</button>
 </header>
     
     
 <!-- NAVIGATION HERE -->
     <nav class="clearfix">
+        <div>Swag Shop</div>
         <ul >
             <li><a href="#">Home</a></li>
             <li><a href="#">Products</a></li>
@@ -71,8 +75,8 @@
             </label>
             <label class="top">Quantity<input type="number" name="quantity"></label>
             <div>Material</div>
-            <label class="sbs"><input type="radio" name="material" value="plastic">Plastic</label>
-            <label class="sbs"><input type="radio" name="material" value="aluminum">Aluminum</label>
+            <label class="sbs"><input type="radio" name="material" value="plastic"> Plastic</label>
+            <label class="sbs"><input type="radio" name="material" value="aluminum"> Aluminum</label>
         </fieldset>
         <fieldset>
             <legend>Payment Information</legend>
@@ -89,6 +93,8 @@
     <footer>
         &copy; 2022 &bull; Mark Lund &bull;
     </footer>
-
+</div> <!--close content-->
+</div> <!--closing the movable page wrapper-->
+<script src="js/main.js"></script>
 </body>
 </html>
