@@ -35,8 +35,8 @@ nav ul li {
 }
 nav ul li a {
         display: block;
-        background-color: lighten($menuColor, 10%);
-        color: #eee;
+        background-color: $menuColor;
+        color: white;
         border-right: 1px solid rgba(0,0,0,0.2);
         padding: .5rem 1rem;
         text-decoration: none;
