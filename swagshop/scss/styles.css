@@ -352,22 +352,23 @@ html {
 /*----------- BODY --------------*/
 body {
   font-size: 16px;
-  font-family: Verdana, sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 /*----------- HEADER --------------*/
 header {
   padding: 0.5rem 2%;
   background-color: #ddd;
+  display: grid;
+  grid-template-columns: 75px auto;
+}
+header img {
+  width: 75px;
 }
 
 header h1 {
-  margin: 0;
-}
-
-header h2 {
-  margin: 0;
-  font-weight: normal;
+  margin-left: 1rem;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 /*----------- NAVIGATION --------------*/
