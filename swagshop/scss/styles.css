@@ -358,7 +358,7 @@ body {
 /*----------- HEADER --------------*/
 header {
   padding: 0.5rem 2%;
-  background-color: #ddd;
+  background-color: #eee;
   display: grid;
   grid-template-columns: 75px auto;
 }
@@ -373,7 +373,7 @@ header h1 {
 
 /*----------- NAVIGATION --------------*/
 nav {
-  background-color: #666;
+  background-color: rgb(29, 94, 58);
 }
 
 nav ul {
@@ -389,7 +389,7 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  background-color: #444;
+  background-color: #298552;
   color: #eee;
   border-left: 1px solid #777;
   padding: 0.5rem 0;
@@ -408,7 +408,7 @@ nav ul li a:hover {
 }
 
 nav ul li.active a {
-  background-color: #000;
+  background-color: rgb(31, 82, 102);
   color: #fff;
 }
 
@@ -416,6 +416,63 @@ nav ul li.active a {
 main {
   padding: 0 2%;
   min-height: 10rem;
+}
+
+/*----------FORM------------------*/
+form fieldset {
+  margin: 2rem 0;
+  border: 1px solid green;
+  border-radius: 10px;
+  padding: 0.5rem 2%;
+}
+
+form legend {
+  color: rgb(31, 82, 102);
+  margin: 0 1rem;
+  padding: 0 0.5rem;
+}
+
+form label.top, form div {
+  display: block;
+  padding-top: 1rem;
+  color: #222;
+  font-size: 1rem;
+}
+
+form label.top input, form label.top select {
+  -webkit-appearance: none;
+  display: block;
+  font-size: 1rem;
+  border: solid 1px #AAA;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  width: 100%;
+  max-width: 20rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+form label.sbs {
+  display: block;
+  padding: 0.75rem 0;
+}
+
+form input.submitBtn {
+  border: none;
+  background-color: rgb(31, 82, 102);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  margin: 0 0 2rem 2%;
+  width: 96%;
+  max-width: 20rem;
+}
+
+form label.top input:required {
+  border-left: red solid 6px;
+}
+
+form label.top input:required:valid {
+  border-left: green solid 6px;
 }
 
 /*----------- FOOTER --------------*/
@@ -470,6 +527,10 @@ footer {
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
   /*----------- MAIN --------------*/
+  form label.sbs {
+    padding: 0.4rem 0;
+  }
+
   /*----------- FOOTER --------------*/
 }
 /* end of media query *//*# sourceMappingURL=styles.css.map */
