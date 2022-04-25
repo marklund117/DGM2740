@@ -21,7 +21,9 @@ body {
     font-size: 16px;
     font-family: $mainfont;
 }
-
+main h1 {
+    color: $accentcolor;
+}
 
 /*----------- HEADER --------------*/
 header {
@@ -80,7 +82,7 @@ nav ul li a:hover {
     color: #000;
 }
 nav ul li.active a {
-    background-color: rgba(0,0,0,0.6);
+    background-color: $accentcolor;
     color: #fff;
 }
 
@@ -88,7 +90,7 @@ nav ul li.active a {
 /*----------- HAMBURGER --------------*/
 div#hamburger {
     grid-area: hamburger;
-    background-color: #feff98; 
+    background-color: $maincolor;
 }
 
 

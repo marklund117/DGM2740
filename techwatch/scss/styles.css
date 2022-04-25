@@ -360,6 +360,10 @@ body {
   font-family: "Abel", sans-serif;
 }
 
+main h1 {
+  color: rgb(53, 43, 134);
+}
+
 /*----------- HEADER --------------*/
 header {
   grid-area: header;
@@ -385,7 +389,7 @@ a.myjump {
 
 nav {
   grid-area: navigation;
-  background-color: rgb(49, 153, 122);
+  background-color: rgb(72, 165, 137);
   height: 100vh;
 }
 
@@ -417,14 +421,14 @@ nav ul li a:hover {
 }
 
 nav ul li.active a {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgb(53, 43, 134);
   color: #fff;
 }
 
 /*----------- HAMBURGER --------------*/
 div#hamburger {
   grid-area: hamburger;
-  background-color: #feff98;
+  background-color: rgb(72, 165, 137);
 }
 
 /*----------- MAIN --------------*/
@@ -445,7 +449,7 @@ main p {
 /*----------- FOOTER --------------*/
 footer {
   grid-area: footer;
-  background-color: rgb(49, 153, 122);
+  background-color: rgb(72, 165, 137);
   padding: 0.5rem 2%;
   text-align: center;
   color: white;
