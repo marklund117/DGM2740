@@ -1,4 +1,10 @@
-header, nav, main, footer,div#hamburger {
+div#pageWrapper {
+        grid-template-areas:
+        "header"
+        "navigation"
+        "content"
+        "footer";
+        grid-template-columns: auto;
         max-width: 64rem;
         margin:auto;
 }
@@ -8,11 +14,18 @@ header, nav, main, footer,div#hamburger {
 
 
 /*----------- HEADER --------------*/
-
+header img {
+        width: 50%;
+}
 
 
 /*----------- NAVIGATION --------------*/
-nav ul li {flex-basis: auto;}
+nav ul li {
+        flex-basis: auto;
+        a {
+                padding: 0.6rem 1rem;
+        }
+}
 
 
 /*----------- MAIN --------------*/
@@ -20,4 +33,4 @@ nav ul li {flex-basis: auto;}
 
 
 /*----------- FOOTER --------------*/
-    
+   

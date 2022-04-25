@@ -12,20 +12,23 @@
 
 <!-- STYLE SHEETS -->
 <link href="scss/styles.css" rel="stylesheet">
-     
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 </head>
+
 <body>
+<div id="pageWrapper">
 <!-- HEADER HERE -->
 	<header>
-        <h1>Company Name</h1>
-        <h2>Grid Named Areas</h2>
+        <img src="images/logo.png">
     </header>
 
     
     
 <!-- NAVIGATION HERE -->
-    <nav>
-        <a class="myjump" href="#">X</a>
+    <nav id="links">
+        <a class="myjump" href="#hamburger">X</a>
         <ul >
             <li><a href="#">Home</a></li>
             <li class="active"><a href="#">Products</a></li>
@@ -51,9 +54,9 @@
     
 <!-- HAMBURGER HERE -->
     <div id="hamburger">
-        <a class="myjump" href="#">&#9776;</a>
+        <a class="myjump" href="#links">&#9776;</a>
     </div>
     
-    
+</div> <!--close wrapper-->  
 </body>
 </html>

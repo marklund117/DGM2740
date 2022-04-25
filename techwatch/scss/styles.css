@@ -349,23 +349,27 @@ html {
   box-sizing: border-box;
 }
 
+div#pageWrapper {
+  display: grid;
+  grid-template-areas: "hamburger" "header" "content" "footer" "navigation";
+}
+
 /*----------- BODY --------------*/
 body {
   font-size: 16px;
-  font-family: Verdana, sans-serif;
+  font-family: "Abel", sans-serif;
 }
 
 /*----------- HEADER --------------*/
 header {
+  grid-area: header;
   padding: 0.5rem 2%;
-  background-color: #ffa8f0;
+  background-color: white;
 }
-header h1 {
-  margin: 0;
-}
-header h2 {
-  margin: 0;
-  font-weight: normal;
+header img {
+  display: block;
+  width: 100%;
+  padding: 0.2rem;
 }
 
 /*----------- NAVIGATION --------------*/
@@ -380,7 +384,9 @@ a.myjump {
 }
 
 nav {
-  background-color: #b68aff;
+  grid-area: navigation;
+  background-color: rgb(49, 153, 122);
+  height: 100vh;
 }
 
 nav ul {
@@ -417,14 +423,15 @@ nav ul li.active a {
 
 /*----------- HAMBURGER --------------*/
 div#hamburger {
+  grid-area: hamburger;
   background-color: #feff98;
 }
 
 /*----------- MAIN --------------*/
 main {
+  grid-area: content;
   padding: 0 2%;
   min-height: 10rem;
-  background-color: #b8ddff;
 }
 main h1 {
   margin: 0;
@@ -437,9 +444,11 @@ main p {
 
 /*----------- FOOTER --------------*/
 footer {
-  background-color: #b5ff98;
+  grid-area: footer;
+  background-color: rgb(49, 153, 122);
   padding: 0.5rem 2%;
   text-align: center;
+  color: white;
 }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
@@ -450,19 +459,24 @@ footer {
 }
 
 @media only screen and (min-width: 35rem) {
+  div#pageWrapper {
+    grid-template-areas: "header header" "navigation content" "footer footer";
+    grid-template-columns: 150px auto;
+  }
+
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
+  header img {
+    width: 66%;
+  }
+
   /*----------- NAVIGATION --------------*/
-  nav ul {
-    margin-left: 2%;
+  a.myjump {
+    display: none;
   }
 
-  nav ul li {
-    flex-basis: 25%;
-  }
-
-  nav ul li a {
-    padding: 0.5rem 1rem;
+  nav {
+    height: auto;
   }
 
   /*----------- MAIN --------------*/
@@ -470,16 +484,25 @@ footer {
 }
 /* end of media query */
 @media only screen and (min-width: 64rem) {
-  header, nav, main, footer, div#hamburger {
+  div#pageWrapper {
+    grid-template-areas: "header" "navigation" "content" "footer";
+    grid-template-columns: auto;
     max-width: 64rem;
     margin: auto;
   }
 
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
+  header img {
+    width: 50%;
+  }
+
   /*----------- NAVIGATION --------------*/
   nav ul li {
     flex-basis: auto;
+  }
+  nav ul li a {
+    padding: 0.6rem 1rem;
   }
 
   /*----------- MAIN --------------*/
