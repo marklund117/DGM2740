@@ -360,7 +360,7 @@ body {
   font-family: "Abel", sans-serif;
 }
 
-main h1 {
+main h1, main h2 {
   color: rgb(53, 43, 134);
 }
 
@@ -444,6 +444,15 @@ main h1 {
 main p {
   margin: 0;
   padding: 0.5rem 0;
+}
+
+div.chunk {
+  display: flex;
+  flex-direction: column;
+}
+div.chunk img {
+  max-height: 300px;
+  max-width: 500px;
 }
 
 /*----------- FOOTER --------------*/

@@ -21,7 +21,7 @@ body {
     font-size: 16px;
     font-family: $mainfont;
 }
-main h1 {
+main h1, main h2 {
     color: $accentcolor;
 }
 
@@ -101,6 +101,14 @@ main {
     min-height: 10rem;
     h1 {margin: 0; padding: 1rem 0 0 0;}
     p {margin: 0; padding: .5rem 0;}
+}
+div.chunk {
+    display: flex;
+    flex-direction: column;
+    img {
+        max-height: 300px;
+        max-width: 500px;
+    }
 }
 
 
