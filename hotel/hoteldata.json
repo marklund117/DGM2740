@@ -1,0 +1,25 @@
+[   {
+    "name":"Southern Serenade",
+    "photo":"images/serenade.jpg",
+    "address":["1555 North Canyon Dr.","Lexington, VA 88765"],
+    "phone":"1-307-886-1234"
+    },
+    {
+    "name":"Hilton Inn and Suites",
+    "photo":"images/hilton.jpg",
+    "address":["555 Main St.","Salt Lake City UT, 84111"],
+    "phone":"1-307-886-1234"
+    },
+    {
+    "name":"Comfort Inn",
+    "photo":"images/comfort.jpg",
+    "address":["2019 Pennsylvania Ave","Washington, DC 20125"],
+    "phone":"1-303-389-2000"
+    },
+    {
+    "name":"Hyatt Place Washington",
+    "photo":"images/hyatt.jpg",
+    "address":["1555 North Canyon Dr.","Lexington VA 88765"],
+    "phone":"1-202-828-2500"
+    }
+]

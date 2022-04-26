@@ -1,0 +1,124 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    background-color: $maincolor;
+    width: 100vw;
+}
+header h1 {
+    margin: 0;
+    color: white;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+header h2 {
+    margin: 0;
+    color: white;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+/*----------- NAVIGATION --------------*/
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: $maincolor;
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    ul li {
+        flex-basis: 33.33%;
+    }
+    ul li a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+    }
+    ul li.active {
+        background-color: lighten($maincolor, 10%);
+    }
+    ul li a:hover {
+        background-color: lighten($maincolor, 10%);
+    }
+    ul li a ion-icon {
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+    }
+}
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+}
+
+div.hotelwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 10rem;
+    section {
+        padding: 0.5rem;
+        margin: 0.5rem;
+        background-color: lighten($maincolor, 50%);
+        border-radius: 1rem;
+    }
+}
+figure {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    margin-left: 0;
+    img {
+        width: 100%;
+    }
+}
+figcaption {
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: white;
+}
+div.hotelwrapper div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+div.hotelwrapper div span ion-icon {
+    float: left;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+div.hotelwrapper div span p {
+    padding-left: 2.7rem;
+    padding-right: 1rem;
+}
+/*----------- FOOTER --------------*/
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
