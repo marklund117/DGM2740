@@ -349,6 +349,11 @@ html {
   box-sizing: border-box;
 }
 
+header, nav, main, footer {
+  max-width: 941px;
+  margin: auto;
+}
+
 /*----------- BODY --------------*/
 body {
   font-size: 16px;
@@ -356,9 +361,55 @@ body {
 }
 
 /*----------- HEADER --------------*/
+header {
+  padding-top: 1.5rem;
+}
+
+figure.logo {
+  float: left;
+  margin: 0;
+}
+
+div.headerText {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  justify-content: center;
+}
+
+header h1 {
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-left: 2px;
+  color: #0480b1;
+}
+
+header h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 9.3px;
+  margin: 0;
+  border-bottom: 1px solid #a8a8b2;
+  margin-left: 3px;
+  color: #a8a8b2;
+}
+
 /*----------- NAVIGATION --------------*/
 /*----------- MAIN --------------*/
-/*----------- FOOTER --------------*/
+figure.hero {
+  margin: 0;
+  padding: 0;
+}
+figure.hero img {
+  max-width: 941px;
+  margin: 0;
+  padding: 0;
+}
+
+/*-------- FOOTER --------------*/
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
   content: "";
@@ -370,19 +421,41 @@ body {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #a8a8b2;
+    padding-left: 1rem;
+  }
+  nav ul li a ion-icon {
+    font-size: 1.1rem;
+  }
+  nav ul li a span {
+    padding-left: 0.3rem;
+  }
+  nav ul li a:hover {
+    color: #0480b1;
+  }
+
   /*----------- MAIN --------------*/
   /*----------- FOOTER --------------*/
 }
 /* end of media query */
-@media only screen and (min-width: 64rem) {
-  header, nav, main, footer {
-    max-width: 940px;
-    margin: auto;
-  }
-
+@media only screen and (min-width: 59rem) {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
+  nav ul {
+    padding-right: 0;
+  }
+
   /*----------- MAIN --------------*/
   /*----------- FOOTER --------------*/
 }

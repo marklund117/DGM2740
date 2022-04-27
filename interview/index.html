@@ -15,9 +15,19 @@
      
 </head>
 <body>
-<!-- HEADER HERE -->\
+<!-- HEADER HERE -->
 <div class="headerWrapper">
 	<header>
+        <figure class="logo">
+            <img src="images/blueriverlogo1x.png" alt="blue river logo" 
+            srcset="images/blueriverlogo1x.png 1x, 
+            images/blueriverlogo2x.png 2x, 
+            images/blueriverlogo3x.png 3x">
+        </figure>
+        <div class="headerText">
+        <h1>BlueRiver</h1>
+        <h2>STUDIOS</h2>
+        </div>
     </header>
 </div>    
     
@@ -25,9 +35,9 @@
 <div class="navWrapper">
     <nav class="clearfix">
         <ul >
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>    
+            <li class="active"><a href="#"><ion-icon name="home"></ion-icon><span>HOME</span></a></li>
+            <li><a href="#"><ion-icon name="folder-open"></ion-icon><span>PORTFOLIO</span></a></li>
+            <li><a href="#"><ion-icon name="call"></ion-icon><span>CONTACT</span</a></li>    
         </ul>
     </nav>
 </div>   
@@ -35,7 +45,32 @@
 <!-- CONTENT HERE -->
 <div class="mainWrapper">
     <main>
-        
+        <figure class="hero">
+            <img src="images/bannerlarge.jpg" alt="tech company banner"
+            srcset="images/bannersmall.jpg 471w,
+            images/bannermedium.jpg 706w,
+            images/bannerlarge.jpg 941w">
+        </figure>
+        <div class="darkWrapper">
+            <div class="darkGrid">
+            <div class="darkLeft">
+                <h2>EXPECT THE BEST</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="darkRight">
+
+            </div>
+            </div>
+        </div>
+        <div class="upperGrid">
+
+        </div>
+        <div class="lowerGrid">
+
+        </div>
+        <div class="logoBar">
+
+        </div>
     </main>
 </div>    
 <!-- FOOTER HERE -->
@@ -44,5 +79,7 @@
         Call at 1-800-555-1234
     </footer>
 </div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
