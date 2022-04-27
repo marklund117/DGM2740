@@ -4,7 +4,7 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*----------- apply a natural box layout model to all elements --------------*/
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-header, nav, main, footer {
+header, nav, figure.hero, div.darkGrid, h1#moreabout, div.upperGrid, div.lowerGrid, footer {
     max-width: 941px;
     margin:auto;
 }
@@ -52,8 +52,7 @@ header h2 {
 
 /*----------- MAIN --------------*/
 figure.hero {
-    margin: 0;
-    padding: 0;
+    margin-bottom: 0.5rem;
     img {
         max-width: 941px;
         margin: 0;
@@ -62,8 +61,71 @@ figure.hero {
 }
 
 div.darkWrapper {
-    
+    background-color: $darkzone;
+    padding-bottom: 1rem;
 }
+div.darkGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 2%;
+    h1, h2 {
+        color: $yellowtone;
+
+    }
+    p {
+        color: white;
+        font-style: italic;
+        font-size: 0.8rem;
+    }
+    ul {
+        color: white;
+    }
+    h3 {
+        color: white;
+        margin: 0.2rem 0;
+        font-weight: 100;
+    }
+    h1 {
+        font-style: italic;
+        margin-top: 0.3rem;
+    }
+    div.darkLeft {
+        h2 {
+            margin-bottom: 0;
+        }
+        p {
+            margin-top: 0.5rem;
+        }
+    }
+    div.darkRight {
+        text-align: center;
+        h2 {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+h1#moreabout {
+    color: $mainblue;
+    margin-top: 3rem;
+}
+div.upperGrid {
+    display: grid;
+    div.uppercard {
+        max-width: 220px;
+        h2 {
+            color: $mainblue;
+            font-weight: 100;
+            margin-top: 0.7rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            color: $linegrey;
+            font-size: 0.8rem;
+            margin-top: 0;
+        }
+    }
+}
+
 /*-------- FOOTER --------------*/
 
 

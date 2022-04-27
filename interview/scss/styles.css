@@ -349,7 +349,7 @@ html {
   box-sizing: border-box;
 }
 
-header, nav, main, footer {
+header, nav, figure.hero, div.darkGrid, h1#moreabout, div.upperGrid, div.lowerGrid, footer {
   max-width: 941px;
   margin: auto;
 }
@@ -400,13 +400,78 @@ header h2 {
 /*----------- NAVIGATION --------------*/
 /*----------- MAIN --------------*/
 figure.hero {
-  margin: 0;
-  padding: 0;
+  margin-bottom: 0.5rem;
 }
 figure.hero img {
   max-width: 941px;
   margin: 0;
   padding: 0;
+}
+
+div.darkWrapper {
+  background-color: #111118;
+  padding-bottom: 1rem;
+}
+
+div.darkGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 2%;
+}
+div.darkGrid h1, div.darkGrid h2 {
+  color: #fdd831;
+}
+div.darkGrid p {
+  color: white;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+div.darkGrid ul {
+  color: white;
+}
+div.darkGrid h3 {
+  color: white;
+  margin: 0.2rem 0;
+  font-weight: 100;
+}
+div.darkGrid h1 {
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+div.darkGrid div.darkLeft h2 {
+  margin-bottom: 0;
+}
+div.darkGrid div.darkLeft p {
+  margin-top: 0.5rem;
+}
+div.darkGrid div.darkRight {
+  text-align: center;
+}
+div.darkGrid div.darkRight h2 {
+  margin-bottom: 0.5rem;
+}
+
+h1#moreabout {
+  color: #0480b1;
+  margin-top: 3rem;
+}
+
+div.upperGrid {
+  display: grid;
+}
+div.upperGrid div.uppercard {
+  max-width: 220px;
+}
+div.upperGrid div.uppercard h2 {
+  color: #0480b1;
+  font-weight: 100;
+  margin-top: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+div.upperGrid div.uppercard p {
+  color: #a8a8b2;
+  font-size: 0.8rem;
+  margin-top: 0;
 }
 
 /*-------- FOOTER --------------*/
@@ -445,6 +510,20 @@ figure.hero img {
   }
 
   /*----------- MAIN --------------*/
+  div.darkGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  div.darkLeft {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+
+  div.darkRight {
+    grid-column-end: span 2;
+    text-align: right !important;
+  }
+
   /*----------- FOOTER --------------*/
 }
 /* end of media query */
@@ -457,6 +536,19 @@ figure.hero img {
   }
 
   /*----------- MAIN --------------*/
+  div.darkGrid {
+    padding: 0;
+  }
+
+  div.darkLeft {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+  }
+
+  div.darkRight {
+    grid-column-start: 4;
+  }
+
   /*----------- FOOTER --------------*/
 }
 /* end of media query *//*# sourceMappingURL=styles.css.map */

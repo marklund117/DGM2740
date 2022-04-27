@@ -15,7 +15,16 @@ nav ul {
 
 
 /*----------- MAIN --------------*/
-
+div.darkGrid {
+        padding: 0;
+}
+div.darkLeft {
+        grid-column-start: 1;
+        grid-column-end: span 3;
+    }
+    div.darkRight {
+        grid-column-start: 4;
+    }
 
 
 /*----------- FOOTER --------------*/

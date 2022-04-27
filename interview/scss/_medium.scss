@@ -35,7 +35,17 @@ nav ul {
 
 
 /*----------- MAIN --------------*/
-
+div.darkGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+div.darkLeft {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+div.darkRight {
+    grid-column-end: span 2;
+    text-align: right !important;
+}
 
 
 /*----------- FOOTER --------------*/
