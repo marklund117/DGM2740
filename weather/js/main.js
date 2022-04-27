@@ -51,10 +51,6 @@ fetch(APIURL) // lets get the weather
             dayDiv.appendChild(dayPic)
             document.querySelector('#weatherwrapper').appendChild(dayDiv)
         } // end if
-
-
-
-
     }
 })
 
