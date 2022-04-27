@@ -8,7 +8,7 @@ fetch(apiURL)
     //Once it comes back, display it to the console.
     console.log(myList);
 
-for (i = 0; i < myList.length; i++) {
+for (i = 0; i < myList.length; i++) { // loop for each hotel object in the JSON
 
 // FIGURE STUFF
 let myImageTag = document.createElement("img") // create an image
