@@ -419,52 +419,24 @@ main {
   min-height: 10rem;
 }
 
-div#hotelwrapper {
+div#weatherwrapper {
   display: grid;
   grid-template-columns: 1fr;
-  padding-bottom: 10rem;
 }
-div#hotelwrapper section {
-  padding: 0.5rem;
+div#weatherwrapper div {
+  background-color: rgb(32, 128, 75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 28rem;
   margin: 0.5rem;
-  background-color: #b3eccd;
-  border-radius: 1rem;
-}
-
-figure {
-  position: relative;
-  padding: 0;
-  width: 100%;
-  margin-left: 0;
-}
-figure img {
-  width: 100%;
-}
-
-figcaption {
-  position: absolute;
-  bottom: 4px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 0.5rem;
-  font-size: 1rem;
   color: white;
+  padding-top: 1rem;
+  border-radius: 1rem;
+  font-size: 1.8rem;
 }
-
-div#hotelwrapper div {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-div#hotelwrapper div span ion-icon {
-  float: left;
-  font-size: 2rem;
-  margin-top: 2rem;
-}
-
-div#hotelwrapper div span p {
-  padding-left: 2.7rem;
-  padding-right: 1rem;
+div#weatherwrapper div p {
+  font-size: 1.5rem;
 }
 
 /*----------- FOOTER --------------*/
@@ -480,8 +452,8 @@ div#hotelwrapper div span p {
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
   /*----------- MAIN --------------*/
-  div#hotelwrapper {
-    grid-template-columns: 1fr 1fr;
+  div#weatherwrapper {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   /*----------- FOOTER --------------*/
@@ -492,6 +464,10 @@ div#hotelwrapper div span p {
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
   /*----------- MAIN --------------*/
+  div#weatherwrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
   /*----------- FOOTER --------------*/
 }
 /* end of media query *//*# sourceMappingURL=styles.css.map */
