@@ -56,7 +56,7 @@ nav {
         padding: 0.5rem;
     }
     ul li.active {
-        background-color: lighten($maincolor, 10%);
+        background-color: darken($maincolor, 10%);
     }
     ul li a:hover {
         background-color: lighten($maincolor, 10%);
