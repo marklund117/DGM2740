@@ -72,7 +72,7 @@ main {
     min-height: 10rem;
 }
 
-div.hotelwrapper {
+div#hotelwrapper {
     display: grid;
     grid-template-columns: 1fr;
     padding-bottom: 10rem;
@@ -101,16 +101,16 @@ figcaption {
     font-size: 1rem;
     color: white;
 }
-div.hotelwrapper div {
+div#hotelwrapper div {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-div.hotelwrapper div span ion-icon {
+div#hotelwrapper div span ion-icon {
     float: left;
     font-size: 2rem;
     margin-top: 2rem;
 }
-div.hotelwrapper div span p {
+div#hotelwrapper div span p {
     padding-left: 2.7rem;
     padding-right: 1rem;
 }

@@ -8,7 +8,7 @@
     "name":"Hilton Inn and Suites",
     "photo":"images/2.jpg",
     "address":["555 Main St.","Salt Lake City UT, 84111"],
-    "phone":"1-307-886-1234"
+    "phone":"1-999-846-1239"
     },
     {
     "name":"Comfort Inn",
@@ -19,7 +19,7 @@
     {
     "name":"Hyatt Place Washington",
     "photo":"images/4.jpg",
-    "address":["1555 North Canyon Dr.","Lexington VA 88765"],
+    "address":["1698 South Hills Pl.","Arlington VA 58785"],
     "phone":"1-202-828-2500"
     }
 ]
