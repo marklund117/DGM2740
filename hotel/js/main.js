@@ -1,5 +1,5 @@
 // what is the path to the JSON file?
-const apiURL = "../hoteldata.json"
+const apiURL = "marklund117.github.io/hotel/hoteldata.json"
 
 //Go fetch it and then wait for a response.
 fetch(apiURL)
