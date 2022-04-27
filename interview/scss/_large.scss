@@ -5,7 +5,9 @@
 
 
 /*----------- HEADER --------------*/
-
+header {
+        margin-left: auto;
+}
 
 
 /*----------- NAVIGATION --------------*/
@@ -21,11 +23,23 @@ div.darkGrid {
 div.darkLeft {
         grid-column-start: 1;
         grid-column-end: span 3;
+        ul {
+                padding-left: 6.5rem;
+        }
     }
     div.darkRight {
         grid-column-start: 4;
     }
-
-
+ h1#moreabout {
+         margin-left: auto;
+ }
+    div.upperGrid {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 0;
+}
+div.lowerGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: ;
+}
 /*----------- FOOTER --------------*/
     

@@ -16,7 +16,7 @@ nav ul {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     justify-content: flex-end;
-    padding-right: 0.5rem;
+    padding-right: 2%;
     li a {
         text-decoration: none;
         color: $linegrey;
@@ -45,6 +45,9 @@ div.darkLeft {
 div.darkRight {
     grid-column-end: span 2;
     text-align: right !important;
+}
+div.upperGrid {
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 

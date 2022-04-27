@@ -18,6 +18,7 @@ body {
 /*----------- HEADER --------------*/
 header {
     padding-top: 1.5rem;
+    margin-left: 2%;
 }
 figure.logo {
     float: left;
@@ -107,11 +108,17 @@ div.darkGrid {
 h1#moreabout {
     color: $mainblue;
     margin-top: 3rem;
+    border-bottom: 1px solid $linegrey;
+    margin-bottom: 1rem;
+    margin-left: 2%;
 }
 div.upperGrid {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    grid-column-gap: 20.3333px;
+    padding: 0 2%;
     div.uppercard {
-        max-width: 220px;
         h2 {
             color: $mainblue;
             font-weight: 100;
@@ -122,10 +129,39 @@ div.upperGrid {
             color: $linegrey;
             font-size: 0.8rem;
             margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        img {
+            width: 100%;
         }
     }
 }
 
+div.lowerGrid {
+    display: grid;
+    justify-items: stretch;
+    grid-column-gap: 20.3333px;
+    h2 {
+        color: $mainblue;
+        font-weight: 100;
+        margin-top: 0.7rem;
+        margin-bottom: 0.5rem;
+    }
+    p {
+        color: $linegrey;
+        font-size: 0.8rem;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+div.overgraph {
+    display: flex;
+    flex-direction: column;
+    button#bluebutton {
+        background-color: $mainblue;
+    }
+
+}
 /*-------- FOOTER --------------*/
 
 

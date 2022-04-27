@@ -363,6 +363,7 @@ body {
 /*----------- HEADER --------------*/
 header {
   padding-top: 1.5rem;
+  margin-left: 2%;
 }
 
 figure.logo {
@@ -454,13 +455,17 @@ div.darkGrid div.darkRight h2 {
 h1#moreabout {
   color: #0480b1;
   margin-top: 3rem;
+  border-bottom: 1px solid #a8a8b2;
+  margin-bottom: 1rem;
+  margin-left: 2%;
 }
 
 div.upperGrid {
   display: grid;
-}
-div.upperGrid div.uppercard {
-  max-width: 220px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: stretch;
+  grid-column-gap: 20.3333px;
+  padding: 0 2%;
 }
 div.upperGrid div.uppercard h2 {
   color: #0480b1;
@@ -472,6 +477,28 @@ div.upperGrid div.uppercard p {
   color: #a8a8b2;
   font-size: 0.8rem;
   margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+div.upperGrid div.uppercard img {
+  width: 100%;
+}
+
+div.lowerGrid {
+  display: grid;
+  justify-items: stretch;
+  grid-column-gap: 20.3333px;
+}
+div.lowerGrid h2 {
+  color: #0480b1;
+  font-weight: 100;
+  margin-top: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+div.lowerGrid p {
+  color: #a8a8b2;
+  font-size: 0.8rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 /*-------- FOOTER --------------*/
@@ -492,7 +519,7 @@ div.upperGrid div.uppercard p {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     justify-content: flex-end;
-    padding-right: 0.5rem;
+    padding-right: 2%;
   }
   nav ul li a {
     text-decoration: none;
@@ -524,12 +551,20 @@ div.upperGrid div.uppercard p {
     text-align: right !important;
   }
 
+  div.upperGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   /*----------- FOOTER --------------*/
 }
 /* end of media query */
 @media only screen and (min-width: 59rem) {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
+  header {
+    margin-left: auto;
+  }
+
   /*----------- NAVIGATION --------------*/
   nav ul {
     padding-right: 0;
@@ -544,9 +579,25 @@ div.upperGrid div.uppercard p {
     grid-column-start: 1;
     grid-column-end: span 3;
   }
+  div.darkLeft ul {
+    padding-left: 6.5rem;
+  }
 
   div.darkRight {
     grid-column-start: 4;
+  }
+
+  h1#moreabout {
+    margin-left: auto;
+  }
+
+  div.upperGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
+  }
+
+  div.lowerGrid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   /*----------- FOOTER --------------*/
