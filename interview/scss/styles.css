@@ -459,6 +459,17 @@ figure.hero img {
   padding: 0;
 }
 
+picture.banner {
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  width: 100%;
+}
+picture.banner img {
+  max-width: 100%;
+}
+
 div.darkWrapper {
   background-color: #111118;
   padding-bottom: 1rem;

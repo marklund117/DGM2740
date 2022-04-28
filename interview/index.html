@@ -49,10 +49,12 @@
 <div class="mainWrapper">
     <main>
         <figure class="hero">
-            <img src="images/bannerlarge.jpg" alt="tech company banner"
-            sizes="471px, 706px, 941px" srcset="images/bannersmall.jpg 471w,
-            images/bannermedium.jpg 706w,
-            images/bannerlarge.jpg 941w" >
+            <picture class="banner">
+                <source media="(max-width: 471px)" srcset="images/bannersmall.jpg">
+                <source media="(max-width: 706px)" srcset="images/bannermedium.jpg">
+                <source media="(max-width: 941px)" srcset="images/bannerlarge.jpg">
+                <img src="images/bannerlarge.jpg" alt="banner">
+            </picture>
         </figure>
         <div class="darkWrapper">
             <div class="darkGrid">
