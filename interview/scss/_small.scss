@@ -4,7 +4,7 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*----------- apply a natural box layout model to all elements --------------*/
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-header, nav, figure.hero, div.darkGrid, h1#moreabout, div.upperGrid, div.lowerGrid, footer {
+header, nav, figure.hero, div.darkGrid, h1#moreabout, div.upperGrid, div.lowerGrid, ul.logos, footer {
     max-width: 941px;
     margin:auto;
 }
@@ -49,7 +49,56 @@ header h2 {
     color: $linegrey;
 }
 /*----------- NAVIGATION --------------*/
-
+div#hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 1rem;
+    a {
+        font-size: 2.5rem;
+        color: $mainblue;
+        margin: 1rem;
+        text-decoration: none;
+        background: transparent;
+        border: none;
+    }
+}
+nav {
+    ul {
+        background-color: $mainblue;
+        position: absolute;
+        right: 0;
+        list-style-type: none;
+        width: 100%;
+        display: none;
+        margin-left: 0;
+        padding-left: 0;
+        padding-top: 0;
+        z-index: 999;
+        margin-top: 0;
+    } // end ul
+    ul.open {
+        display: block;
+    }
+    ul li {
+        border-bottom: 1px solid rgba(255,255,255,0.5);
+    }
+    ul li a {
+        background-color: white;
+        color: $mainblue;
+        display: block;
+        padding: 0.9rem;
+        font-weight: 100;
+        text-decoration: none;
+        text-align: right;
+    } // end anchor
+    ul li.active a {
+        background-color: white;
+    }
+    ul li a:hover {
+        background-color: white;
+    }
+}
 
 /*----------- MAIN --------------*/
 figure.hero {
@@ -117,7 +166,9 @@ div.upperGrid {
     grid-template-columns: 1fr 1fr;
     justify-items: stretch;
     grid-column-gap: 20.3333px;
-    padding: 0 2%;
+    margin: 0 2%;
+    border-bottom: 1px solid $linegrey;
+    margin-bottom: 1rem;
     div.uppercard {
         h2 {
             color: $mainblue;
@@ -141,6 +192,7 @@ div.lowerGrid {
     display: grid;
     justify-items: stretch;
     grid-column-gap: 20.3333px;
+    padding: 0 2%;
     h2 {
         color: $mainblue;
         font-weight: 100;
@@ -157,13 +209,54 @@ div.lowerGrid {
 div.overgraph {
     display: flex;
     flex-direction: column;
-    button#bluebutton {
+    width: 100%;
+    max-width: 302px;
+    button {
         background-color: $mainblue;
+        border: none;
+        padding: 0.3rem 1rem;
+        border-radius: 0.7rem;
+        color: white;
+        font-weight: 400;
+        font-size: 1.4rem;
+        width: 80%;
+        align-self: center;
+    }
+    span {
+        color: #767676;
+        text-align: center;
+        margin-top: 0.8rem;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+}
+div.overgraph {
+    transform: translateY(-100%);
+}
+
+ul.logos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    padding: 1rem 0;
+    li {
+        margin: 0 auto;
     }
 
 }
 /*-------- FOOTER --------------*/
-
+div.footerWrapper {
+    background: linear-gradient(180deg, #0480b1, #013f63);
+}
+footer {
+    color: white;
+    padding: 1rem 0;
+    font-weight: 600;
+    margin-left: 1rem;
+}
 
 
 /*----- Clearfix: Force an Element not to collapse -----*/

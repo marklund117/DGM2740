@@ -349,7 +349,7 @@ html {
   box-sizing: border-box;
 }
 
-header, nav, figure.hero, div.darkGrid, h1#moreabout, div.upperGrid, div.lowerGrid, footer {
+header, nav, figure.hero, div.darkGrid, h1#moreabout, div.upperGrid, div.lowerGrid, ul.logos, footer {
   max-width: 941px;
   margin: auto;
 }
@@ -399,6 +399,56 @@ header h2 {
 }
 
 /*----------- NAVIGATION --------------*/
+div#hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 1rem;
+}
+div#hamburger a {
+  font-size: 2.5rem;
+  color: #0480b1;
+  margin: 1rem;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+}
+
+nav ul {
+  background-color: #0480b1;
+  position: absolute;
+  right: 0;
+  list-style-type: none;
+  width: 100%;
+  display: none;
+  margin-left: 0;
+  padding-left: 0;
+  padding-top: 0;
+  z-index: 999;
+  margin-top: 0;
+}
+nav ul.open {
+  display: block;
+}
+nav ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+nav ul li a {
+  background-color: white;
+  color: #0480b1;
+  display: block;
+  padding: 0.9rem;
+  font-weight: 100;
+  text-decoration: none;
+  text-align: right;
+}
+nav ul li.active a {
+  background-color: white;
+}
+nav ul li a:hover {
+  background-color: white;
+}
+
 /*----------- MAIN --------------*/
 figure.hero {
   margin-bottom: 0.5rem;
@@ -465,7 +515,9 @@ div.upperGrid {
   grid-template-columns: 1fr 1fr;
   justify-items: stretch;
   grid-column-gap: 20.3333px;
-  padding: 0 2%;
+  margin: 0 2%;
+  border-bottom: 1px solid #a8a8b2;
+  margin-bottom: 1rem;
 }
 div.upperGrid div.uppercard h2 {
   color: #0480b1;
@@ -487,6 +539,7 @@ div.lowerGrid {
   display: grid;
   justify-items: stretch;
   grid-column-gap: 20.3333px;
+  padding: 0 2%;
 }
 div.lowerGrid h2 {
   color: #0480b1;
@@ -501,7 +554,59 @@ div.lowerGrid p {
   margin-bottom: 1.5rem;
 }
 
+div.overgraph {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 302px;
+}
+div.overgraph button {
+  background-color: #0480b1;
+  border: none;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  color: white;
+  font-weight: 400;
+  font-size: 1.4rem;
+  width: 80%;
+  align-self: center;
+}
+div.overgraph span {
+  color: #767676;
+  text-align: center;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+div.overgraph {
+  transform: translateY(-100%);
+}
+
+ul.logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style-type: none;
+  padding: 1rem 0;
+}
+ul.logos li {
+  margin: 0 auto;
+}
+
 /*-------- FOOTER --------------*/
+div.footerWrapper {
+  background: linear-gradient(180deg, #0480b1, #013f63);
+}
+
+footer {
+  color: white;
+  padding: 1rem 0;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
   content: "";
@@ -512,19 +617,33 @@ div.lowerGrid p {
 @media only screen and (min-width: 35rem) {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
+  div#hamburger {
+    display: none;
+  }
+
+  div#closex {
+    display: none;
+  }
+
   /*----------- NAVIGATION --------------*/
   nav ul {
     display: flex;
+    flex-direction: row;
     list-style-type: none;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     justify-content: flex-end;
     padding-right: 2%;
+    background-color: transparent;
+    position: relative;
   }
   nav ul li a {
     text-decoration: none;
     color: #a8a8b2;
     padding-left: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
   }
   nav ul li a ion-icon {
     font-size: 1.1rem;
@@ -534,6 +653,17 @@ div.lowerGrid p {
   }
   nav ul li a:hover {
     color: #0480b1;
+  }
+  nav ul li.active a {
+    background-color: white;
+  }
+  nav ul li a:hover {
+    background-color: white;
+  }
+
+  nav ul.open {
+    display: flex;
+    flex-direction: row;
   }
 
   /*----------- MAIN --------------*/
@@ -553,6 +683,34 @@ div.lowerGrid p {
 
   div.upperGrid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  div.lowerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div.techcard1 {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+  }
+
+  div.techcard2 {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+  }
+
+  div.nopic {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+
+  div.thegraph {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+
+  div.overgraph {
+    transform: translateY(-100%);
   }
 
   /*----------- FOOTER --------------*/
@@ -593,13 +751,51 @@ div.lowerGrid p {
 
   div.upperGrid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   div.lowerGrid {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0;
+  }
+
+  div.techcard1 {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+  }
+
+  div.techcard2 {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+  }
+
+  div.nopic {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 3;
+    grid-row-end: span 1;
+  }
+
+  div.thegraph {
+    grid-column-start: 3;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+  }
+
+  div.overgraph {
+    transform: translateY(-100%);
   }
 
   /*----------- FOOTER --------------*/
+  footer {
+    margin-left: auto;
+  }
 }
 /* end of media query *//*# sourceMappingURL=styles.css.map */

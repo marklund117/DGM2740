@@ -35,11 +35,42 @@ div.darkLeft {
  }
     div.upperGrid {
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            padding: 0;
+            margin-left: auto;
+            margin-right: auto;
 }
 div.lowerGrid {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: ;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 0;
+}
+div.techcard1 {
+        grid-column-start: 1;
+        grid-column-end: span 1;
+        grid-row-start: 1;
+        grid-row-end: span 2;
+}
+div.techcard2 {
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        grid-row-start: 1;
+        grid-row-end: span 2;   
+}
+div.nopic {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-start: 3;
+        grid-row-end: span 1; 
+}
+div.thegraph {
+        grid-column-start: 3;
+        grid-column-end: span 1;
+        grid-row-start: 1;
+        grid-row-end: span 3; 
+}
+div.overgraph {
+        transform: translateY(-100%);
 }
 /*----------- FOOTER --------------*/
-    
+ footer {
+         margin-left: auto;
+ }   
